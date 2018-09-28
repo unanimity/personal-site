@@ -10,6 +10,7 @@ import {MatButtonModule, MatCheckboxModule, MatSidenavModule} from '@angular/mat
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { LogoComponent } from './fragments/logo/logo.component';
 import { TitleMessageComponent } from './fragments/title-message/title-message.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     LogoComponent,
-    TitleMessageComponent
+    TitleMessageComponent,
+    AboutMeComponent
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,

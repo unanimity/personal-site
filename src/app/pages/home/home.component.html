@@ -14,28 +14,16 @@
 
 <aside class="sidebar"   >
   <nav class="navigation" role="navigation" id="navigation">
-    <a [scrollTo]="'#about-me'" [scrollDuration]="1000" [scrollOffset]="-100"   class="navigation__link current j-navigation">About me</a>
-    <a [scrollTo]="'#competence'" [scrollDuration]="1000" [scrollOffset]="-100"  class="navigation__link j-navigation">Competence</a>
-    <a [scrollTo]="'#experience'" [scrollDuration]="1000" [scrollOffset]="-100"  class="navigation__link j-navigation">Experience</a>
-    <a [scrollTo]="'#approach'" [scrollDuration]="1000" [scrollOffset]="-100"   class="navigation__link j-navigation">Approach</a>
-    <a  [scrollTo]="'#let-start'" [scrollDuration]="1000" [scrollOffset]="-100"  class="navigation__link j-navigation">Let’s start</a>
+    <a [scrollTo]="'#about-me'" [scrollDuration]="1000" [scrollOffset]="-10"   class="navigation__link current j-navigation">About me</a>
+    <a [scrollTo]="'#competence'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Competence</a>
+    <a [scrollTo]="'#experience'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Experience</a>
+    <a [scrollTo]="'#approach'" [scrollDuration]="1000" [scrollOffset]="-10"   class="navigation__link j-navigation">Approach</a>
+    <a  [scrollTo]="'#let-start'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Let’s start</a>
   </nav>
 </aside>
 
 <div class="layout-wrapper" id="scroll-wrapper"  >
-  <section class="screen screen_about-us j-section" data-screen="about-us" id="about-me">
-    <article class="content content_about-us">
-
-
-    <app-title-message></app-title-message>
-
-
-      <p class="content__description">We build technology startups and large information systems</p>
-      <div class="center">
-        <a href="index.html#competence" class="link j-navigation">Why choose us?</a>
-      </div>
-    </article>
-  </section>
+  <app-about-me></app-about-me>
   <section class="screen screen_competence j-section" data-screen="competence" id="competence">
     <article class="content clearfix">
       <h2 class="content__subtitle">Competence</h2>
