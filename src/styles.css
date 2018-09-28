@@ -1168,7 +1168,8 @@ button,input{
   font-weight:400;
   line-height:1.5;
   text-decoration:none;
-  color:#fa644b
+  color:#fa644b;
+  cursor:pointer;
 }
 .link_large{
   font-size:32px;

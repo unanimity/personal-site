@@ -7,7 +7,9 @@
 
     <p class="content__description">The journey of a thousand miles begins with one step. Lao Tzu</p>
     <div class="center">
-      <a href="index.html#competence" class="link j-navigation">My portfolio?</a>
+      <a [scrollTo]="'#projects'"
+         [scrollDuration]="1000"
+         [scrollOffset]="-100" class="link j-navigation">My projects?</a>
     </div>
   </article>
 </section>

@@ -16,8 +16,8 @@
   <nav class="navigation" role="navigation" id="navigation">
     <a [scrollTo]="'#about-me'" [scrollDuration]="1000"  class="navigation__link  j-navigation" [ngClass]="menu_item==0 ?'current':''"  (click)="menu_item=0">About me</a>
     <a [scrollTo]="'#competence'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==1 ?'current':''"  (click)="menu_item=1" >Competence</a>
-    <a [scrollTo]="'#experience'" [scrollDuration]="1000" class="navigation__link j-navigation" [ngClass]="menu_item==2 ?'current':''"  (click)="menu_item=2" >Projects</a>
-    <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==3 ?'current':''"  (click)="menu_item=3" >Life</a>
+    <a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation" [ngClass]="menu_item==2 ?'current':''"  (click)="menu_item=2" >Projects</a>
+    <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==3 ?'current':''"  (click)="menu_item=3" >History</a>
     <a [scrollTo]="'#contacts'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==4 ?'current':''"  (click)="menu_item=4" >Contacts</a>
   </nav>
 </aside>
@@ -26,55 +26,7 @@
   <app-about-me></app-about-me>
   <app-competence></app-competence>
   <app-projects></app-projects>
-
-  <section class="screen screen_approach j-section" data-screen="approach" id="approach">
-    <div class="content">
-      <h2 class="content__subtitle content__subtitle_icon">Our approach
-        <i class="content__subtitle__icon icon icon-4"></i>
-      </h2>
-      <p class="content__description">We build efficient and effective processes to achieve your goals.</p>
-      <div class="content__icon-mobile">
-        <i class="icon icon-4"></i>
-      </div>
-      <ol class="numbered-list">
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>1.</span> Dedicated team</h4>
-          <p class="numbered-list__item__description">Our company has a project-orientated structure. We offer dedicated teams for your projects to focus solely on your needs.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>2.</span> Flexible methodology</h4>
-          <p class="numbered-list__item__description">We are aligned with your processes and tools. We select optimal methodology for your project: from iterative (Agile: SCRUM, Kanban) to predetermined (Waterfall). We work in your timezone.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>3.</span> Quick prototyping and deep analysis</h4>
-          <p class="numbered-list__item__description">Requirements gathering, focus groups and usage analytics, user stories, quick prototyping, A/B testing, documented requirements and modern UX &mdash; we do everything to help you make reasonable and long-run decisions.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>4.</span> Quality assurance and control</h4>
-          <p class="numbered-list__item__description">Defined test plans, test cases, test runs, quality metrics and reports. Quality management decreases cost and increases customer satisfaction.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>5.</span> Automated maintenance and reusability</h4>
-          <p class="numbered-list__item__description">We reuse components, automate environments and delivery process, monitor and ensure 24x7 operations of your product.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>6.</span> Experienced staff</h4>
-          <p class="numbered-list__item__description">We attract experienced professionals with interesting projects and modern technologies. We let them grow by offering trainings and supporting internal knowledge/lessons sharing.</p>
-        </li>
-        <li class="numbered-list__item j-scroll-animate">
-          <h4 class="numbered-list__item__title">
-            <span>7.</span> Transparency</h4>
-          <p class="numbered-list__item__description">Our work is completely transparent: detailed WBS with estimates and risks; predictable builds with release notes and known defects; who is working on what, everyone's performance indicators and detailed timesheet reports.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+<app-history></app-history>
  <app-contacts></app-contacts>
 </div>
 <script src="js/vendor.min.js"></script>

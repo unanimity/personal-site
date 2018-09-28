@@ -14,6 +14,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { CompetenceComponent } from './pages/competence/competence.component';
+import { HistoryComponent } from './pages/history/history.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     AboutMeComponent,
     ContactsComponent,
     ProjectsComponent,
-    CompetenceComponent
+    CompetenceComponent,
+    HistoryComponent
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,

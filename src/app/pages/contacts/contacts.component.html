@@ -2,7 +2,25 @@
   <div class="content">
     <div class="columns clearfix">
       <article class="columns__item columns__item_form">
-
+        <form class="form form_flip form-ajax form-reset j-form-flip" id="form-validate" data-forge-name="feedback-form" action="/feedback">
+          <div class="form__border form__front j-form-side">
+            <h2 class="content__subtitle">Let's start</h2>
+            <p class="content__description">Message us. Usually we reply on the same day.</p>
+            <div class="form__row">
+              <input name="email" type="email" class="form__input j-validate" placeholder="Your email" data-validate-method="email" data-forge-name="email"> </div>
+            <div class="form__row">
+              <textarea name="message" cols="30" rows="10" class="form__textarea j-validate" placeholder="Your message" data-validate-method="empty" data-forge-name="message"></textarea>
+            </div>
+            <button type="submit" class="button disabled j-form-button" data-loading="Sent messages" data-original="Send a message" disabled="">Send a message</button>
+          </div>
+          <div class="form__result form__back j-form-side">
+            <i class="form__result__close j-form-close"></i>
+            <div class="form__result__middle">
+              <h4 class="form__result__title j-reply-title">Thank you!</h4>
+              <p class="form__result__description j-reply-message">We’ll reply you soon</p>
+            </div>
+          </div>
+        </form>
       </article>
       <article class="columns__item columns__item_contacts">
         <div class="contacts">
