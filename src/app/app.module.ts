@@ -11,6 +11,7 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
 import { LogoComponent } from './fragments/logo/logo.component';
 import { TitleMessageComponent } from './fragments/title-message/title-message.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LogoComponent,
     TitleMessageComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ContactsComponent
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,

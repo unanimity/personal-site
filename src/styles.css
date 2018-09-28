@@ -577,7 +577,7 @@ ol:not([class]){
 .screen{
   position:relative;
   z-index:10;
-  height:100%;
+  height:calc(100vh + 5px);
   min-height:100%;
   margin:0;
   -webkit-transition:-webkit-box-shadow .7s;
@@ -591,9 +591,7 @@ ol:not([class]){
   -webkit-box-shadow:-15px 0 30px rgba(0,0,0,.1);
   box-shadow:-15px 0 30px rgba(0,0,0,.1)
 }
-.screen_let-start{
-  background-image:none
-}
+/* contacts --*/
 .screen__header{
   position:absolute;
   z-index:15;

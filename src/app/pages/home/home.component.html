@@ -14,16 +14,18 @@
 
 <aside class="sidebar"   >
   <nav class="navigation" role="navigation" id="navigation">
-    <a [scrollTo]="'#about-me'" [scrollDuration]="1000" [scrollOffset]="-10"   class="navigation__link current j-navigation">About me</a>
-    <a [scrollTo]="'#competence'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Competence</a>
-    <a [scrollTo]="'#experience'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Experience</a>
-    <a [scrollTo]="'#approach'" [scrollDuration]="1000" [scrollOffset]="-10"   class="navigation__link j-navigation">Approach</a>
-    <a  [scrollTo]="'#let-start'" [scrollDuration]="1000" [scrollOffset]="-10"  class="navigation__link j-navigation">Let’s start</a>
+    <a [scrollTo]="'#about-me'" [scrollDuration]="1000" [scrollOffset]="-1"   class="navigation__link current j-navigation">About me</a>
+    <a [scrollTo]="'#competence'" [scrollDuration]="1000" [scrollOffset]="-1"  class="navigation__link j-navigation">Competence</a>
+    <a [scrollTo]="'#experience'" [scrollDuration]="1000" [scrollOffset]="-1"  class="navigation__link j-navigation">Experience</a>
+    <a [scrollTo]="'#approach'" [scrollDuration]="1000" [scrollOffset]="-1"   class="navigation__link j-navigation">Approach</a>
+    <a [scrollTo]="'#contacts'" [scrollDuration]="1000" [scrollOffset]="-1"  class="navigation__link j-navigation">Contacts</a>
   </nav>
 </aside>
 
 <div class="layout-wrapper" id="scroll-wrapper"  >
   <app-about-me></app-about-me>
+
+
   <section class="screen screen_competence j-section" data-screen="competence" id="competence">
     <article class="content clearfix">
       <h2 class="content__subtitle">Competence</h2>
