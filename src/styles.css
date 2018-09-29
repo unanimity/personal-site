@@ -1903,5 +1903,18 @@ button,input{
 .lost
 {
   color: #7d7d9b;
+}
+.contacts_img {
+  width: 70%;
+}
+.contacts_icons
+{
 
+ margin: 25px;
+}
+.contacts__line > p
+{
+
+  font-size: 21px;
+  color:#fa644b;
 }
