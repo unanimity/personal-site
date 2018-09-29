@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competence.component.css']
 })
 export class CompetenceComponent implements OnInit {
-
+public menu = 0;
   constructor() { }
 
   ngOnInit() {

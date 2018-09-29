@@ -1530,7 +1530,9 @@ button,input{
   transition:color .6s;
   text-decoration:none;
   letter-spacing:.2ex;
-  color:#fa644b
+  color:#fa644b;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 .groups__item__link.is-current{
   color:#1e1e28
@@ -1594,7 +1596,9 @@ button,input{
     display:block;
     float:none;
     width:100%;
-    margin-right:0
+    margin-right:0;
+
+
   }
   .groups__item__content{
     position:relative;
@@ -1895,4 +1899,9 @@ button,input{
     line-height:1;
     margin-left:0
   }
+}
+.lost
+{
+  color: #7d7d9b;
+
 }
