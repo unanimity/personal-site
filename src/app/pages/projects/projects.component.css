@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color:red;
+  grid-template-areas: "large . ."
+  "large  . .";
+  align-items: center;
+  justify-content: center;
+}
+
+
+.item {
+  background-color:blue;
+  padding:10px;
+}
+.large
+{
+  grid-area:large;
+  background-color:yellow;
+}
