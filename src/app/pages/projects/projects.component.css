@@ -1,22 +1,51 @@
-.wrapper {
+
+.container {
+  max-width: 1028px;
+  min-width: 150px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  background-color:red;
-  grid-template-areas: "large . ."
-  "large  . .";
-  align-items: center;
-  justify-content: center;
+  margin-left: 224px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
 }
 
-
-.item {
-  background-color:blue;
-  padding:10px;
+.container .column {
+  width: 50%;
+  padding: 0 25px;
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
 }
-.large
-{
-  grid-area:large;
-  background-color:yellow;
+.container .column .demo-title {
+  margin: 0 0 15px;
+  color: #666666;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container .info {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+.container .info span {
+  color: #666666;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #e74c3c;
 }

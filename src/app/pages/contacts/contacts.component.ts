@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
 
+
+
+  }
+QR = false;
+  onQR() {
+    this.QR = !this.QR;
+  }
   ngOnInit() {
   }
 

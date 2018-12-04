@@ -47,7 +47,10 @@ const appRoutes: Routes = [
     CompetenceComponent,
     HistoryComponent,
     LargeCardComponent,
-    HeroLogoComponent
+    HeroLogoComponent,
+
+
+
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,

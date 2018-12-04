@@ -7,4 +7,7 @@ import 'hammerjs';
 })
 export class AppComponent {
   title = 'app';
+
+
+
 }

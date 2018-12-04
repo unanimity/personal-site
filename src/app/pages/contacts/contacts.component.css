@@ -1,3 +1,13 @@
 .screen_contacts{
   background-image:none
 }
+.contacts__icon
+{
+  min-width: 350px;
+
+}
+.columns__item_contacts,.columns__item_form
+{
+  max-width: 50%;
+  min-width: 50%;
+}
