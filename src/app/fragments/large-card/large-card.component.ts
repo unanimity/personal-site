@@ -1,5 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, Input} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {st} from '@angular/core/src/render3';
+import {LargeCardData} from './large-card-data';
 
 @Component({
   selector: 'app-large-card',
@@ -31,14 +33,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class LargeCardComponent implements OnInit {
 
-  public title = '';
-  public type = '';
-  public sub_discription = '';
-  public discription = '';
-  public status = 'finished';
-  public img_url = '';
-  public date="";
-  public color="";
+  error @Input() card: LargeCardData;
 
 
 
@@ -61,3 +56,4 @@ export class LargeCardComponent implements OnInit {
   }
 
 }
+

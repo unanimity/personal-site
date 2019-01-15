@@ -15,6 +15,7 @@ import { CompetenceComponent } from './pages/competence/competence.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { LargeCardComponent } from './fragments/large-card/large-card.component';
 import { HeroLogoComponent } from './fragments/hero-logo/hero-logo.component';
+import { MoreComponent } from './fragments/more/more.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     HistoryComponent,
     LargeCardComponent,
     HeroLogoComponent,
+    MoreComponent,
 
 
 
