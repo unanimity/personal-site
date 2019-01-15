@@ -6,7 +6,6 @@
           <div class="form__border form__front j-form-side">
             <h2 class="content__subtitle">Let's start</h2>
             <p class="content__description">Message us. Usually we reply on the same day.</p>
-<img src="./images/bizcardmaker-com-theme-picture--stardust-full.jpg">
 
 
 
@@ -24,9 +23,15 @@
       </article>
       <article class="columns__item columns__item_contacts">
         <div class="contacts">
-          <div class="contacts__icon">
-             <img src="./images/qr-code.svg">
+          <button (click)="onQR()">QR</button>
+          <div *ngIf="!QR" class="contacts__icon">
+            <img src="./images/qr-code.svg">
           </div>
+          <div *ngIf="QR" class="contacts__icon">
+           <img src="./images/bizcardmaker-com-theme-picture--stardust-full.jpg">
+          </div>
+
+
           <div class="contacts__group">
             <div class="contacts__group__middle">
               <div class="contacts__line">

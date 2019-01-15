@@ -47,7 +47,7 @@ export  class ProjectsListDemo extends ProjectsList {
 
 constructor () {
   super(new Project ('sd', 'sdv', 'dfb', '', true));
-  //super(new Project ('sd', 'sdv', 'dfb', '', true));
+
 
 
 
