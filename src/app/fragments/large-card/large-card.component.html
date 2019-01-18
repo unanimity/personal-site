@@ -5,8 +5,8 @@
       <!-- Thumbnail-->
       <div class="thumbnail">
         <div class="date" [ngStyle]="{'background-color':card.color}">
-          <div class="day"></div>
-          <div class="month"></div>
+          <div class="day">{{card.date | date:'D'}}</div>
+          <div class="month">{{card.date | date:'MM'}}</div>
         </div><img src="{{card.img_url}}"/>
       </div>
       <!-- Post Content-->
@@ -21,4 +21,3 @@
       </a>
     </div>
   </div>
-
