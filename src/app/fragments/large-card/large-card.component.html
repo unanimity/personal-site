@@ -1,23 +1,24 @@
   <!-- Normal Demo-->
   <div class="column">
-
     <!-- Post-->
     <div class="post-module"  >
       <!-- Thumbnail-->
       <div class="thumbnail">
-        <div class="date">
+        <div class="date" [ngStyle]="{'background-color':card.color}">
           <div class="day"></div>
           <div class="month"></div>
         </div><img src="{{card.img_url}}"/>
       </div>
       <!-- Post Content-->
+      <a href="{{card.link}}" target="_blank">
       <div class="post-content">
-        <div class="category">{{card.category}}</div>
+        <div class="category" [ngStyle]="{'background-color':card.color}">{{card.category}}</div>
         <h1 class="title">{{card.title}}</h1>
-        <h2 class="sub_title">{{card.sub_title}}</h2>
-        <p class="description" [@isOpen]="isOpen ? 'open' : 'closed'" >{{card.description}}</p>
+        <h2 class="sub_title" [ngStyle]="{'color':card.color}">{{card.sub_title}}</h2>
+        <p class="description" [@isOpen]="isOpen ? 'open' : 'closed'" >{{card.description | limitText:100}}</p>
         <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> {{card.timestamp}}</span><span class="comments"><i class="fa fa-comments"></i><a href="#">{{card.comments}}</a></span></div>
       </div>
+      </a>
     </div>
   </div>
 

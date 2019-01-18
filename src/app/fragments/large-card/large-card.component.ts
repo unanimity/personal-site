@@ -1,7 +1,7 @@
 import {Component, HostListener, OnInit, Input} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {st} from '@angular/core/src/render3';
-import {LargeCardData} from './large-card-data';
+import {ProjectsService, Project} from '../../pages/projects/projects.service';
+
 
 @Component({
   selector: 'app-large-card',
@@ -33,11 +33,13 @@ import {LargeCardData} from './large-card-data';
 
 export class LargeCardComponent implements OnInit {
 
-  error @Input() card: LargeCardData;
 
+  public card: Project = this.ProjectService.DefaultProject;
 
+  constructor(private ProjectService: ProjectsService) {
 
-  constructor() { }
+  }
+
   isOpen = false;
 
 

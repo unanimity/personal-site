@@ -16,6 +16,8 @@ import { HistoryComponent } from './pages/history/history.component';
 import { LargeCardComponent } from './fragments/large-card/large-card.component';
 import { HeroLogoComponent } from './fragments/hero-logo/hero-logo.component';
 import { MoreComponent } from './fragments/more/more.component';
+import {ProjectsService} from './pages/projects/projects.service';
+import { LimitTextPipe } from './filters/limit-text.pipe';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -50,15 +52,13 @@ const appRoutes: Routes = [
     LargeCardComponent,
     HeroLogoComponent,
     MoreComponent,
-
-
-
+    LimitTextPipe,
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
     ScrollToModule.forRoot()
   ],
-  providers: [],
+  providers: [ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
