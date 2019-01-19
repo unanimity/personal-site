@@ -7,6 +7,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import {HistoryService} from './history.service';
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
@@ -14,7 +15,7 @@ import {
 })
 export class HistoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(public HistoryService: HistoryService) {}
 
   ngOnInit() {
   }

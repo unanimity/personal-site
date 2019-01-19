@@ -1,0 +1,4 @@
+<p class="content_text">{{ShowedText}}</p>
+{{CurrentPage}}
+<button *ngIf="CurrentPage!=0" (click)="onLeft()">Left</button>
+<button *ngIf="ShowedText.length>4" (click)="onRigth()">Rigth</button>
