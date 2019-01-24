@@ -19,8 +19,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+
+
+
+this.app.get('/api', (req, res) => res.json({ application: 'Reibo collection'}));
+this.app.get('*', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'));
+});
+
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
