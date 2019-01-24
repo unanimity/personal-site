@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleMessageComponent implements OnInit {
 public  text_content: String;
-private content_list: string[] = ['student', 'programmer', 'tourist', 'friend', 'tourist', 'dreamer'];
+private content_list: string[] = ['student', 'programmer', 'tourist', 'friend', 'tourist', 'dreamer','Master'];
 private time_interval = 350;
 private pause = 3;
 

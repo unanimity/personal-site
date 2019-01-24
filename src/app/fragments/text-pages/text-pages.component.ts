@@ -9,18 +9,18 @@ export class TextPagesComponent implements OnInit {
 @Input() Text = '';
 public ShowedText = '';
 public CurrentPage = 0;
-public PageLength = 250;
+public PageLength = 1250;
    trail = '...';
   constructor() {
 
 
   }
-  // TODO
+
   onUpdatePage() {
 
     this.ShowedText = this.Text.substring(
-    this.PageLength * this.CurrentPage,
-    this.PageLength + this.PageLength * this.CurrentPage) + this.trail;
+    this.PageLength * this.CurrentPage,// TODO find `space` cursor
+    this.PageLength + this.PageLength * this.CurrentPage) + ((this.CurrentPage * this.PageLength + this.PageLength < (this.Text.length)) ? this.trail : '');
 
   }
   ngOnInit() {

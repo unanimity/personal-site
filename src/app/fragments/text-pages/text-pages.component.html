@@ -1,4 +1,6 @@
 <p class="content_text">{{ShowedText}}</p>
-{{CurrentPage}}
-<button *ngIf="CurrentPage!=0" (click)="onLeft()">Left</button>
-<button *ngIf="ShowedText.length>4" (click)="onRigth()">Rigth</button>
+<div style="text-align: right">
+  <span *ngIf="CurrentPage!=0" (click)="onLeft()" class="link link_large">Back</span>
+  <span *ngIf="CurrentPage*PageLength+PageLength<(Text.length)" (click)="onRigth()" class="link link_large">More</span>
+</div>
+
