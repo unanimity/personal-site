@@ -1,38 +1,36 @@
-<span class="active disabled" style="display: none;"></span>
-<noscript>
-  <div class="js_disabled">В вашем браузере отключена поддержка JavaScript! Для нормальной работоспособности сайта необходимо разрешить использование JavaScript.</div>
-</noscript>
-<header class="layout-header" id="header"  >
-  <div class="layout-header__wrapper">
-    <app-logo></app-logo>
-    <!--<nav class="layout-header__menu header-menu">-->
-      <!--<a href="index.html#let-start" class="header-menu__link header-menu__link_filled j-navigation current">Contact us</a>-->
-    <!--</nav>-->
+
+  <span class="active disabled" style="display: none;"></span>
+  <noscript>
+    <div class="js_disabled">В вашем браузере отключена поддержка JavaScript! Для нормальной работоспособности сайта необходимо разрешить использование JavaScript.</div>
+  </noscript>
+
+  <header class="layout-header" id="header"  >
+    <div class="layout-header__wrapper">
+      <app-logo></app-logo>
+    </div>
+  </header>
+
+
+  <aside class="sidebar"   >
+    <nav class="navigation" role="navigation" id="navigation" >
+      <a [scrollTo]="'#about-me'" [scrollDuration]="500"  class="navigation__link  j-navigation" [ngClass]="menu_item==0 ?'current':''"  (click)="menu_item=0">About me</a>
+      <a [scrollTo]="'#competence'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==1 ?'current':''"  (click)="menu_item=1" >Competence</a>
+      <a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation" [ngClass]="menu_item==2 ?'current':''"  (click)="menu_item=2" >Projects</a>
+      <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==3 ?'current':''"  (click)="menu_item=3" >History</a>
+      <a [scrollTo]="'#contacts'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==4 ?'current':''"  (click)="menu_item=4" >Contacts</a>
+    </nav>
+  </aside>
+
+  <div class="layout-wrapper" id="scroll-wrapper">
+    <app-about-me></app-about-me>
+    <app-competence></app-competence>
+    <app-projects></app-projects>
+    <app-history></app-history>
+    <app-contacts></app-contacts>
   </div>
-</header>
 
-
-<aside class="sidebar"   >
-  <nav class="navigation" role="navigation" id="navigation">
-    <a [scrollTo]="'#about-me'" [scrollDuration]="1000"  class="navigation__link  j-navigation" [ngClass]="menu_item==0 ?'current':''"  (click)="menu_item=0">About me</a>
-    <a [scrollTo]="'#competence'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==1 ?'current':''"  (click)="menu_item=1" >Competence</a>
-    <a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation" [ngClass]="menu_item==2 ?'current':''"  (click)="menu_item=2" >Projects</a>
-    <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==3 ?'current':''"  (click)="menu_item=3" >History</a>
-    <a [scrollTo]="'#contacts'" [scrollDuration]="1000"  class="navigation__link j-navigation" [ngClass]="menu_item==4 ?'current':''"  (click)="menu_item=4" >Contacts</a>
-  </nav>
-</aside>
-
-<div class="layout-wrapper" id="scroll-wrapper"  >
-  <app-about-me></app-about-me>
-  <app-competence></app-competence>
-  <app-projects></app-projects>
-  <app-history></app-history>
-  <app-contacts></app-contacts>
-
-
-</div>
-<script src="js/vendor.min.js"></script>
-<script src="js/app.min.js"></script>
-<!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
-<![endif]-->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/app.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->

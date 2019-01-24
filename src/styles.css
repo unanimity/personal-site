@@ -611,7 +611,7 @@ ol:not([class]){
 }
 @media screen and (max-width:375px){
   .screen_about-us{
-    z-index:1
+
   }
   .screen_about-us:before{
     opacity:1;

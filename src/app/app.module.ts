@@ -20,6 +20,8 @@ import {ProjectsService} from './pages/projects/projects.service';
 import { LimitTextPipe } from './filters/limit-text.pipe';
 import { TextPagesComponent } from './fragments/text-pages/text-pages.component';
 import {HistoryService} from './pages/history/history.service';
+import { LifestyleComponent } from './pages/lifestyle/lifestyle.component';
+import {MasonryGalleryModule} from 'ngx-masonry-gallery';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -29,8 +31,8 @@ const appRoutes: Routes = [
     data: { title: 'Sergei Kharlamov' }
   },
   {
-    path: 'HeroLogo',
-    component: HeroLogoComponent,
+    path: 'lifestyle',
+    component: LifestyleComponent,
     data: { title: 'Sergei Kharlamov' }
   }/*,
   { path: '',
@@ -56,10 +58,11 @@ const appRoutes: Routes = [
     MoreComponent,
     LimitTextPipe,
     TextPagesComponent,
+    LifestyleComponent,
   ],
   imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),MasonryGalleryModule
   ],
   providers: [ProjectsService, HistoryService],
   bootstrap: [AppComponent]

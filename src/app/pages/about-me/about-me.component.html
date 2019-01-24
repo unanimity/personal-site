@@ -1,15 +1,11 @@
 <section class="screen screen_about-us j-section" data-screen="about-us" id="about-me">
   <article class="content content_about-us">
 
-
     <app-title-message></app-title-message>
-
 
     <p class="content__description">The journey of a thousand miles begins with one step. Lao Tzu</p>
     <div class="center">
-      <a [scrollTo]="'#projects'"
-         [scrollDuration]="1000"
-         [scrollOffset]="-100" class="navigation__link link j-navigation">My lifestyle . . .</a>
+      <a class="navigation__link link j-navigation" [routerLink]="'/lifestyle'">My lifestyle . . .</a>
     </div>
   </article>
 </section>
