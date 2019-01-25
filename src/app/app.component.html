@@ -1,2 +1,22 @@
 
+<span class="active disabled" style="display: none;"></span>
+<noscript>
+  <div class="js_disabled">В вашем браузере отключена поддержка JavaScript! Для нормальной работоспособности сайта необходимо разрешить использование JavaScript.</div>
+</noscript>
+
+<header class="layout-header" id="header"  >
+  <div class="layout-header__wrapper">
+    <app-logo></app-logo>
+    <nav class="layout-header__menu header-menu">
+      <a class="header-menu__link header-menu__link_filled j-navigation current" routerLink="/login">Login</a>
+    </nav>
+  </div>
+</header>
+
 <router-outlet></router-outlet>
+
+<script src="js/vendor.min.js"></script>
+<script src="js/app.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->

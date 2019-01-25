@@ -1,43 +1,10 @@
 
-<span class="active disabled" style="display: none;"></span>
-<noscript>
-  <div class="js_disabled">В вашем браузере отключена поддержка JavaScript! Для нормальной работоспособности сайта необходимо разрешить использование JavaScript.</div>
-</noscript>
+  <app-lifestyle-menu   ></app-lifestyle-menu>
 
-<header class="layout-header" id="header"  >
-  <div class="layout-header__wrapper">
-    <app-logo></app-logo>
-    <nav class="layout-header__menu header-menu">
-    <a class="header-menu__link header-menu__link_filled j-navigation current">Login</a>
-    </nav>
+  <div class="layout-wrapper" id="scroll-wrapper">
+
+    <app-photos></app-photos>
+    <app-story></app-story>
+    <app-books></app-books>
+
   </div>
-</header>
-
-
-<aside class="sidebar"   >
-  <nav class="navigation" role="navigation" id="navigation">
-    <a [scrollTo]="'#about-me'" [scrollDuration]="500"  class="navigation__link  j-navigation"   >Photos</a>
-    <a [scrollTo]="'#competence'" [scrollDuration]="1000"  class="navigation__link j-navigation" >Story</a>
-    <a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation"    >Books</a>
-    <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation"   >Music</a>
-    <a [scrollTo]="'#contacts'" [scrollDuration]="1000"  class="navigation__link j-navigation"   >Files</a>
-  </nav>
-</aside>
-
-<div class="layout-wrapper" id="scroll-wrapper">
-  <section class="screen screen_contacts j-section"   id="contacts">
-    <div class="content">
-      <div class="columns clearfix">
-        <article class="columns__item columns__item_form">
-          <ngx-masonry-gallery [width]="600" [images]="images"></ngx-masonry-gallery>
-        </article>
-      </div>
-    </div>
-  </section>
-</div>
-
-<script src="js/vendor.min.js"></script>
-<script src="js/app.min.js"></script>
-<!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
-<![endif]-->

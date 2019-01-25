@@ -22,6 +22,13 @@ import { TextPagesComponent } from './fragments/text-pages/text-pages.component'
 import {HistoryService} from './pages/history/history.service';
 import { LifestyleComponent } from './pages/lifestyle/lifestyle.component';
 import {MasonryGalleryModule} from 'ngx-masonry-gallery';
+import { LoginComponent } from './pages/login/login.component';
+import { GeneralMenuComponent } from './fragments/general-menu/general-menu.component';
+import { LifestyleMenuComponent } from './fragments/lifestyle-menu/lifestyle-menu.component';
+import { PhotosComponent } from './pages/photos/photos.component';
+import { StoryComponent } from './pages/story/story.component';
+import { BooksComponent } from './pages/books/books.component';
+import { MusicComponent } from './pages/music/music.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -33,6 +40,11 @@ const appRoutes: Routes = [
   {
     path: 'lifestyle',
     component: LifestyleComponent,
+    data: { title: 'Sergei Kharlamov' }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
     data: { title: 'Sergei Kharlamov' }
   }/*,
   { path: '',
@@ -59,10 +71,17 @@ const appRoutes: Routes = [
     LimitTextPipe,
     TextPagesComponent,
     LifestyleComponent,
+    LoginComponent,
+    GeneralMenuComponent,
+    LifestyleMenuComponent,
+    PhotosComponent,
+    StoryComponent,
+    BooksComponent,
+    MusicComponent,
   ],
-  imports: [  RouterModule.forRoot(appRoutes, { enableTracing: true } ),
+  imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
-    ScrollToModule.forRoot(),MasonryGalleryModule
+    ScrollToModule.forRoot(), MasonryGalleryModule
   ],
   providers: [ProjectsService, HistoryService],
   bootstrap: [AppComponent]
