@@ -7,7 +7,7 @@ import 'hammerjs';
 })
 export class AppComponent {
 
-   public menu_type = 'general';
+
 
 
 }
