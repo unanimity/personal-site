@@ -29,6 +29,11 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { StoryComponent } from './pages/story/story.component';
 import { BooksComponent } from './pages/books/books.component';
 import { MusicComponent } from './pages/music/music.component';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
+import { AdminMenuComponent } from './fragments/admin-menu/admin-menu.component';
+import {AdminGuardService} from './pages/admin-panel/admin-guard.service';
+import { MetricsLoaderComponent } from './metrics/metrics-loader/metrics-loader.component';
+import {ImageViewerModule} from 'ngx-image-viewer';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -46,12 +51,18 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: { title: 'Sergei Kharlamov' }
+  },
+  {
+    path: 'admin',
+    component: AdminPanelComponent,
+    canActivate: [AdminGuardService],
+    data: { title: 'Sergei Kharlamov' }
   }/*,
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  }/*,
-  { path: '**', component: PageNotFoundComponent }*/
+  }*/,
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
@@ -78,10 +89,13 @@ const appRoutes: Routes = [
     StoryComponent,
     BooksComponent,
     MusicComponent,
+    AdminPanelComponent,
+    AdminMenuComponent,
+    MetricsLoaderComponent,
   ],
   imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
-    ScrollToModule.forRoot(), MasonryGalleryModule
+    ScrollToModule.forRoot(), MasonryGalleryModule, ImageViewerModule.forRoot()
   ],
   providers: [ProjectsService, HistoryService],
   bootstrap: [AppComponent]
