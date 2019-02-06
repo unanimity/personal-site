@@ -32,7 +32,6 @@ import { MusicComponent } from './pages/music/music.component';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { AdminMenuComponent } from './fragments/admin-menu/admin-menu.component';
 import {AdminGuardService} from './pages/admin-panel/admin-guard.service';
-import { MetricsLoaderComponent } from './metrics/metrics-loader/metrics-loader.component';
 import {ImageViewerModule} from 'ngx-image-viewer';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
@@ -91,7 +90,7 @@ const appRoutes: Routes = [
     MusicComponent,
     AdminPanelComponent,
     AdminMenuComponent,
-    MetricsLoaderComponent,
+
   ],
   imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
