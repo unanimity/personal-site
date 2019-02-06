@@ -12,7 +12,7 @@ export class PhotosComponent implements OnInit {
 
   ngOnInit() {
   }
-  private urls: string[] = [
+  public urls: string[] = [
     'http://www.sk-project.ru/images/photos/1.JPG',
     'http://www.sk-project.ru/images/photos/2.JPG',
     'http://www.sk-project.ru/images/photos/3.JPG',

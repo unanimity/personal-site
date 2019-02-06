@@ -3,15 +3,16 @@
     <h2 class="content__subtitle content__subtitle_icon">My Instagram
       <i class="content__subtitle__icon icon icon-4"></i>
     </h2>
+    <ngx-image-viewer [src]="urls"
+                           [config]="{customBtns:[{name: 'link', icon: 'fa fa-paperclip'}]}"
+  >
+  </ngx-image-viewer>
     <div class="columns clearfix">
       <article  >
         <ngx-masonry-gallery [width]="512" [gutter]="21" [images]="images"></ngx-masonry-gallery>
       </article>
     </div>
-    .
-    <ngx-image-viewer [src]="images"
-                      [config]="{customBtns:[{name: 'link', icon: 'fa fa-paperclip'}]}"
-                       >
-    </ngx-image-viewer>
+
+
   </div>
 </section>
