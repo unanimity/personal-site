@@ -1,5 +1,5 @@
-<div>
+<div style="height: 48px">
 
-  <button *ngFor="let tag of tags; let i=index" class="header-menu__link header-menu__link_filled j-navigation current" (click)="chose(i)">{{tag}}</button>
+  <p *ngFor="let tag of tags; let i=index" class="content__description" (click)="chose(i)">{{tag}}</p>
 
 </div>

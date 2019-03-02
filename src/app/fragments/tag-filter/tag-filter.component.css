@@ -1,4 +1,14 @@
-button{
+p{
   margin-right: 25px;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  padding: 3px;
 
+  border-radius: 10px;
+  border-bottom:rgba(255, 104, 77, 0) solid 3px ;
+}
+p:hover{
+
+  border-bottom:#f5644b solid 3px ;
 }
