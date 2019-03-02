@@ -1,5 +1,8 @@
-
-.container {
+.content{
+width: 0px;
+  position: relative; left: 224px; top: 11px;
+}
+.g_container {
   max-width: 1028px;
   min-width: 150px;
   margin-top: 25px;
@@ -11,7 +14,7 @@
   grid-row-gap: 25px;
 }
 
-.container .column {
+.g_container .column {
   width: 50%;
   padding: 0 25px;
   -webkti-box-sizing: border-box;
@@ -19,33 +22,33 @@
   box-sizing: border-box;
   float: left;
 }
-.container .column .demo-title {
+.g_container .column .demo-title {
   margin: 0 0 15px;
   color: #666666;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
 }
-.container .info {
+.g_container .info {
   width: 300px;
   margin: 50px auto;
   text-align: center;
 }
-.container .info h1 {
+.g_container .info h1 {
   margin: 0 0 15px;
   padding: 0;
   font-size: 24px;
   font-weight: bold;
   color: #333333;
 }
-.container .info span {
+.g_container .info span {
   color: #666666;
   font-size: 12px;
 }
-.container .info span a {
+.g_container .info span a {
   color: #000000;
   text-decoration: none;
 }
-.container .info span .fa {
+.g_container .info span .fa {
   color: #e74c3c;
 }

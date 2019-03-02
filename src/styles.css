@@ -2,6 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @font-face{
   font-family:RaisonneFont;
   font-weight:600;
@@ -862,6 +863,9 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder{
 input:focus::placeholder,textarea:focus::placeholder{
   opacity:0;
   color:transparent
+}
+button{
+  cursor: pointer;
 }
 button:focus,input:focus,textarea:focus{
   outline:none

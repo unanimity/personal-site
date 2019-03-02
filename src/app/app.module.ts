@@ -33,6 +33,7 @@ import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { AdminMenuComponent } from './fragments/admin-menu/admin-menu.component';
 import {AdminGuardService} from './pages/admin-panel/admin-guard.service';
 import {ImageViewerModule} from 'ngx-image-viewer';
+import { TagFilterComponent } from './fragments/tag-filter/tag-filter.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -90,6 +91,7 @@ const appRoutes: Routes = [
     MusicComponent,
     AdminPanelComponent,
     AdminMenuComponent,
+    TagFilterComponent,
 
   ],
   imports: [  RouterModule.forRoot(appRoutes),

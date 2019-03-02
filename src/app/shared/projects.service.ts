@@ -27,11 +27,18 @@ export class ProjectsService {
 
 public  Projects: Project [] = [] ;
 
+public ProjectTags = ['All', 'Terminated', 'Finished', 'Developing'];
+
+
+
+
 
   constructor() {
   this.loadTestData();
   }
-
+  onFilter(tag_id: number) {
+console.log(this.ProjectTags[tag_id]);
+  }
 
   loadTestData() {
     this.Projects.push(new class implements Project {
