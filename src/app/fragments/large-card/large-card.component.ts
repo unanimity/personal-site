@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit, Input} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {ProjectsService, Project} from '../../shared/projects.service';
+import {Project} from '../../shared/projects.service';
 
 
 @Component({
@@ -35,9 +35,7 @@ export class LargeCardComponent implements OnInit {
   @Input() card: Project;
 
 
-  constructor(private ProjectService: ProjectsService) {
-  //  if (this.card.id == null ) {this.card = this.ProjectService.DefaultProject; }
-
+  constructor() {
   }
 
   isOpen = false;
@@ -55,7 +53,7 @@ export class LargeCardComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.card);
+
   }
 
 }

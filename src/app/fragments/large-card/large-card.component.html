@@ -16,7 +16,7 @@
         <h1 class="title">{{card.title}}</h1>
         <h2 class="sub_title" [ngStyle]="{'color':card.color}">{{card.sub_title}}</h2>
         <p class="description" [@isOpen]="isOpen ? 'open' : 'closed'" >{{card.description | limitText:100}}</p>
-        <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> {{card.timestamp}}</span><span class="comments"><i class="fa fa-comments"></i><a >{{card.comments}}</a></span></div>
+        <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-"></i> {{card.timestamp}}</span><span class="comments"><i class="fa fa-comments"></i><a >{{card.comments}}</a></span></div>
       </div>
       </a>
     </div>
