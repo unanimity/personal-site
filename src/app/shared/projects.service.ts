@@ -166,6 +166,84 @@ console.log(this.ProjectTags[tag_id]);
       timestamp: string;
       title = 'Tomsk-TPU-120';
     });
+    this.Projects.push(new class implements Project {
+      category = 'Free project';
+      id = uuid();
+      color = '#fa6173';
+      comments = 30;
+      // date= { date.day=12; month=12 };
+      date = new Date('12.12.12');
+      link = 'www.vk.com';
+      description = ' ';
+      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      status =  ProjectStatus.Default;
+      sub_title = 'Firmware & Electronics';
+      timestamp: string;
+      title = 'Dobrie dela';
+    });
+    this.Projects.push(new class implements Project {
+      category = 'Free project';
+      id = uuid();
+      color = '#1f6e16';
+      comments = 30;
+      // date= { date.day=12; month=12 };
+      date = new Date('12.12.12');
+      link = 'www.vk.com';
+      description = ' ';
+      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      status =  ProjectStatus.Default;
+      sub_title = 'Firmware & Electronics';
+      timestamp: string;
+      title = 'iMatreshka';
+    });
+    this.Projects.push(new class implements Project {
+      category = 'Free project';
+      id = uuid();
+      color = '#fa6173';
+      comments = 30;
+      // date= { date.day=12; month=12 };
+      date = new Date('12.12.12');
+      link = 'www.vk.com';
+      description = ' ';
+      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      status =  ProjectStatus.Default;
+      sub_title = 'Firmware & Electronics';
+      timestamp: string;
+      title = 'Hack-Kursk "IT Vocation"';
+    });
+    this.Projects.push(new class implements Project {
+      category = 'Free project';
+      id = uuid();
+      color = '#290d91';
+      comments = 30;
+      // date= { date.day=12; month=12 };
+      date = new Date('12.12.12');
+      link = 'www.vk.com';
+      description = ' ';
+      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      status =  ProjectStatus.Default;
+      sub_title = 'Firmware & Electronics';
+      timestamp: string;
+      title = ' PixelBook.ru';
+    });
+    this.Projects.push(new class implements Project {
+      category = 'Free project';
+      id = uuid();
+      color = '#fa6173';
+      comments = 30;
+      // date= { date.day=12; month=12 };
+      date = new Date('12.12.12');
+      link = 'www.vk.com';
+      description = ' ';
+      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      status =  ProjectStatus.Default;
+      sub_title = 'Firmware & Electronics';
+      timestamp: string;
+      title = 'Dobrie dela';
+    });
+
+
+
   }
 
 }
