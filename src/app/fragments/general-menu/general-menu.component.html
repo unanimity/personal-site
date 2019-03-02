@@ -2,7 +2,7 @@
   <nav class="navigation" role="navigation" id="navigation" >
 
     <a [scrollTo]="'#competence'" [scrollDuration]="1000"  class="navigation__link j-navigation" routerLink="" fragment="competence" [ngClass]="{'current':(menu_item===1)} "  (click)="menu_item=1" >Competence</a>
-    <!--<a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation"   routerLink="" fragment="projects" [ngClass]="{'current':(menu_item===2)} "  (click)="menu_item=2" >Projects</a>-->
+    <a [scrollTo]="'#projects'" [scrollDuration]="1000" class="navigation__link j-navigation"   routerLink="" fragment="projects" [ngClass]="{'current':(menu_item===2)} "  (click)="menu_item=2" >Projects</a>
     <a [scrollTo]="'#approach'" [scrollDuration]="1000"  class="navigation__link j-navigation"  routerLink="" fragment="approach" [ngClass]="{'current':(menu_item===3)} "  (click)="menu_item=3" >History</a>
     <a [scrollTo]="'#contacts'" [scrollDuration]="1000"  class="navigation__link j-navigation"  routerLink="" fragment="contacts" [ngClass]="{'current':(menu_item===4)} "  (click)="menu_item=4" >Contacts</a>
   </nav>

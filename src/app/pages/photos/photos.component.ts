@@ -34,7 +34,6 @@ export class PhotosComponent implements OnInit {
     'http://www.sk-project.ru/images/photos/19.JPG',
     'http://www.sk-project.ru/images/photos/20.JPG',
     'http://www.sk-project.ru/images/photos/21.JPG'
-
   ];
 
   public get images(): IMasonryGalleryImage[] {

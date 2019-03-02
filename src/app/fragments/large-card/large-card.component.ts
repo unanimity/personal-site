@@ -32,11 +32,11 @@ import {ProjectsService, Project} from '../../pages/projects/projects.service';
 
 
 export class LargeCardComponent implements OnInit {
+  @Input() card: Project;
 
-
-  public card: Project = this.ProjectService.DefaultProject;
 
   constructor(private ProjectService: ProjectsService) {
+  //  if (this.card.id == null ) {this.card = this.ProjectService.DefaultProject; }
 
   }
 

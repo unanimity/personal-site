@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 
 export interface Project {
-
+  id: string;
   title: string;
   sub_title: string;
   category: string;
@@ -24,6 +24,7 @@ public  Projects: Project [];
 
 public DefaultProject: Project = new class implements Project {
         category = 'Free project';
+        id = '0';
         color = '#fa644b';
         comments = 30;
        // date= { date.day=12; month=12 };
