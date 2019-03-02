@@ -16,7 +16,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { LargeCardComponent } from './fragments/large-card/large-card.component';
 import { HeroLogoComponent } from './fragments/hero-logo/hero-logo.component';
 import { MoreComponent } from './fragments/more/more.component';
-import {ProjectsService} from './pages/projects/projects.service';
+import {ProjectsService} from './shared/projects.service';
 import { LimitTextPipe } from './filters/limit-text.pipe';
 import { TextPagesComponent } from './fragments/text-pages/text-pages.component';
 import {HistoryService} from './pages/history/history.service';

@@ -1,6 +1,6 @@
 <div class="container" id="projects">
 
-  <app-large-card></app-large-card>
+  <app-large-card *ngFor= "let project of ProjectService.Projects" [card]="project"></app-large-card>
 
 </div>
 

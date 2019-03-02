@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit, Input} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {ProjectsService, Project} from '../../pages/projects/projects.service';
+import {ProjectsService, Project} from '../../shared/projects.service';
 
 
 @Component({
@@ -55,6 +55,7 @@ export class LargeCardComponent implements OnInit {
 
 
   ngOnInit() {
+    console.log(this.card);
   }
 
 }
