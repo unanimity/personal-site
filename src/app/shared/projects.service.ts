@@ -27,7 +27,7 @@ export class ProjectsService {
 
 public  Projects: Project [] = [] ;
 
-public ProjectTags = ['All', 'Terminated', 'Finished', 'Developing'];
+public ProjectTags = ['All', 'Web-sites', 'Mobile app', 'Social'];
 
 
 
@@ -241,8 +241,6 @@ console.log(this.ProjectTags[tag_id]);
       timestamp: string;
       title = 'Dobrie dela';
     });
-
-
 
   }
 
