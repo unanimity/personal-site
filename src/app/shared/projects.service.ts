@@ -14,6 +14,7 @@ export interface Project {
   img_url: string;
   date: Date;
   color: string;
+  language: string;
 
 }
 enum ProjectStatus {
@@ -55,6 +56,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Web site';
       timestamp: string;
       title = 'SPORADIC';
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Commercial';
@@ -70,6 +72,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Desctop programm';
       timestamp: string;
       title = 'Optimum Beauty';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -85,6 +88,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Mobile App';
       timestamp: string;
       title = 'RUNLIMIT';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -100,6 +104,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Education portal';
       timestamp: string;
       title = 'SwiftBook';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -120,6 +125,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Russian Satellites Tanusha 1 and 2';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -135,6 +141,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Дефолтный проект';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -150,6 +157,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = '«Ecuador UTE-ЮЗГУ» RS3S';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -165,6 +173,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Tomsk-TPU-120';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -180,6 +189,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Dobrie dela';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -195,6 +205,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'iMatreshka';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -210,6 +221,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Hack-Kursk "IT Vocation"';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -225,6 +237,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = ' PixelBook.ru';
+      language = 'en'
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -240,6 +253,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Dobrie dela';
+      language = 'en'
     });
 
   }

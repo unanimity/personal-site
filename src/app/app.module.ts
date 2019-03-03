@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,7 +17,7 @@ import { LargeCardComponent } from './fragments/large-card/large-card.component'
 import { HeroLogoComponent } from './fragments/hero-logo/hero-logo.component';
 import { MoreComponent } from './fragments/more/more.component';
 import {ProjectsService} from './shared/projects.service';
-import { LimitTextPipe } from './filters/limit-text.pipe';
+import { LimitTextPipe } from './shared/filters/limit-text.pipe';
 import { TextPagesComponent } from './fragments/text-pages/text-pages.component';
 import {HistoryService} from './pages/history/history.service';
 import { LifestyleComponent } from './pages/lifestyle/lifestyle.component';
@@ -34,6 +34,10 @@ import { AdminMenuComponent } from './fragments/admin-menu/admin-menu.component'
 import {AdminGuardService} from './pages/admin-panel/admin-guard.service';
 import {ImageViewerModule} from 'ngx-image-viewer';
 import { TagFilterComponent } from './fragments/tag-filter/tag-filter.component';
+import {TranslateService} from './shared/translation/translate.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslatePipe } from './shared/translation/translate.pipe';
+import { SetLanguageComponent } from './fragments/set-language/set-language.component';
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -64,7 +68,10 @@ const appRoutes: Routes = [
   }*/,
   { path: '**', redirectTo: ''}
 ];
-
+export function setupTranslateFactory(
+  service: TranslateService): Function {
+  return () => service.use('en');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,13 +99,25 @@ const appRoutes: Routes = [
     AdminPanelComponent,
     AdminMenuComponent,
     TagFilterComponent,
+    TranslatePipe,
+    SetLanguageComponent,
 
   ],
   imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
-    ScrollToModule.forRoot(), MasonryGalleryModule, ImageViewerModule.forRoot()
+    ScrollToModule.forRoot(), MasonryGalleryModule, ImageViewerModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [ProjectsService, HistoryService],
+  providers: [
+    ProjectsService,
+    HistoryService,
+    TranslateService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslateFactory,
+      deps: [ TranslateService ],
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

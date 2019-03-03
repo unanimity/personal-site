@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '../../shared/translation/translate.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-set-language',
+  templateUrl: './set-language.component.html',
+  styleUrls: ['./set-language.component.css']
 })
-export class HomeComponent implements OnInit {
-  public menu_item = 0;
+export class SetLanguageComponent implements OnInit {
+
   constructor(private translate: TranslateService) { }
 
   ngOnInit() {
