@@ -28,22 +28,20 @@ export class ProjectsService {
 
 public  Projects: Project [] = [] ;
 
-public ProjectTags = ['All', 'Web-sites', 'Mobile app', 'Social'];
-
-
-
+public ProjectTags = ['All', 'Website', 'Mobile app', 'Desktop', 'Social'];
 
 
   constructor() {
   this.loadTestData();
   }
+
   onFilter(tag_id: number) {
-console.log(this.ProjectTags[tag_id]);
+    console.log(this.ProjectTags[tag_id]);
   }
 
   loadTestData() {
     this.Projects.push(new class implements Project {
-      category = 'Social';
+      category = 'Website';
       id =  uuid();
       color = '#fa474a';
       comments = 30;
@@ -51,7 +49,7 @@ console.log(this.ProjectTags[tag_id]);
       date = new Date('12.12.12');
       link = 'http://sporadic.ru/';
       description = 'A site to my students club. It powered by WordPress and dinamic Theme Fasion.';
-      img_url = 'http://sporadic.ru/wp-content/uploads/2018/12/P1050312.jpg';
+      img_url = 'images/sporadic.jpg';
       status =  ProjectStatus.Default;
       sub_title = 'Web site';
       timestamp: string;
@@ -59,7 +57,7 @@ console.log(this.ProjectTags[tag_id]);
       language = 'en';
     });
     this.Projects.push(new class implements Project {
-      category = 'Commercial';
+      category = 'Desktop';
       id = uuid();
       color = '#723dfa';
       comments = 30;
@@ -67,33 +65,34 @@ console.log(this.ProjectTags[tag_id]);
       date = new Date('12.12.12');
       link = 'http://www.optimumsoft.ru/';
       description = 'Desktop version of Optimum Beauty\'s consolidated price programs, Velox LLC';
-      img_url = 'https://vk.com/photo-151945352_456239017';
+      img_url = 'images/optimum.jpg';
       status =  ProjectStatus.Default;
       sub_title = 'Desctop programm';
       timestamp: string;
       title = 'Optimum Beauty';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
-      category = 'Free project';
+      category = 'Mobile app';
       id = uuid();
-      color = '#fae21d';
+      color = '#fab100';
       comments = 30;
       // date= { date.day=12; month=12 };
       date = new Date('12.12.12');
       link = 'http://runlimit.com';
-      description = ' ';
-      img_url = 'https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig';
+      description = 'An application for selecting the size of a motorcycle helmet using recognition.\n' +
+        'Development of a mobile application on Kotlin and server side on Node.JS+MySQL';
+      img_url = 'images/runlimit.jpg';
       status = ProjectStatus.Default;
-      sub_title = 'Mobile App';
+      sub_title = 'Android App & Server';
       timestamp: string;
       title = 'RUNLIMIT';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
-      category = 'Free project';
+      category = 'Website';
       id = uuid();
-      color = '#fa69dc';
+      color = '#fa6a12';
       comments = 30;
       // date= { date.day=12; month=12 };
       date = new Date('12.12.12');
@@ -104,7 +103,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Education portal';
       timestamp: string;
       title = 'SwiftBook';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -125,7 +124,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Russian Satellites Tanusha 1 and 2';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -141,7 +140,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Дефолтный проект';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -157,7 +156,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = '«Ecuador UTE-ЮЗГУ» RS3S';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -173,7 +172,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Tomsk-TPU-120';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -189,7 +188,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Dobrie dela';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -205,7 +204,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'iMatreshka';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -221,7 +220,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Hack-Kursk "IT Vocation"';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -237,7 +236,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = ' PixelBook.ru';
-      language = 'en'
+      language = 'en';
     });
     this.Projects.push(new class implements Project {
       category = 'Free project';
@@ -253,7 +252,7 @@ console.log(this.ProjectTags[tag_id]);
       sub_title = 'Firmware & Electronics';
       timestamp: string;
       title = 'Dobrie dela';
-      language = 'en'
+      language = 'en';
     });
 
   }
