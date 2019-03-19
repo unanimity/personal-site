@@ -1,16 +1,16 @@
 
 <section class="screen screen_competence j-section" data-screen="competence" id="competence">
   <article class="content clearfix">
-    <h2 class="content__subtitle">Competence</h2>
+    <h2 class="content__subtitle">{{'Competence'|translate}}</h2>
     <div class="competence clearfix">
       <div class="competence__description">
-        <p class="content__description content__description_small-push">I know how to build great software</p>
+        <p class="content__description content__description_small-push">{{'I know how to build great software'|translate}}</p>
         <i class="icon icon-2"></i>
       </div>
       <div class="competence__groups">
         <div class="groups ">
           <div class="groups__item clearfix"  [ngClass]="menu==0 ?'open':''">
-            <p>Programming</p>
+            <p>{{"Programming"|translate}}</p>
             <a  class="groups__item__link j-change-item" (click)="menu=0" [ngClass]="menu==0 ?'is-current':''">LANGUAGES</a>
             <div class="groups__item__content j-change-content">
               <ul class="languages">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="groups__item clearfix"  [ngClass]="menu==6 ?'open':''">
-            <p>Engineering</p>
+            <p>{{"Engineering"|translate}}</p>
             <a   class="groups__item__link j-change-item" (click)="menu=6" [ngClass]="menu==6?'is-current':''">Design</a>
             <div class="groups__item__content j-change-content">
               <ul class="languages">
