@@ -8,7 +8,7 @@ import {TranslateService} from '../../shared/translation/translate.service';
 })
 export class SetLanguageComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit() {
   }
