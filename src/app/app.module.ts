@@ -40,6 +40,7 @@ import { TranslatePipe } from './shared/translation/translate.pipe';
 import { SetLanguageComponent } from './fragments/set-language/set-language.component';
 import {enableProdMode} from '@angular/core';
 import {environment} from '../environments/environment';
+import { PojectsShowdPipe } from './shared/filters/pojects-showd.pipe';
 
 
 const appRoutes: Routes = [
@@ -105,7 +106,8 @@ if (environment.production) { enableProdMode(); }
     AdminMenuComponent,
     TagFilterComponent,
     TranslatePipe,
-    SetLanguageComponent
+    SetLanguageComponent,
+    PojectsShowdPipe
 
   ],
   imports: [  RouterModule.forRoot(appRoutes),

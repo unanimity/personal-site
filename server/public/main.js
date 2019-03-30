@@ -135,12 +135,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_translation_translate_pipe__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./shared/translation/translate.pipe */ "./src/app/shared/translation/translate.pipe.ts");
 /* harmony import */ var _fragments_set_language_set_language_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./fragments/set-language/set-language.component */ "./src/app/fragments/set-language/set-language.component.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _shared_filters_pojects_showd_pipe__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./shared/filters/pojects-showd.pipe */ "./src/app/shared/filters/pojects-showd.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -216,8 +218,9 @@ var appRoutes = [
 function setupTranslateFactory(service) {
     return function () { return service.use('en'); };
 }
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_40__["environment"].production)
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_40__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+}
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -250,7 +253,8 @@ var AppModule = /** @class */ (function () {
                 _fragments_admin_menu_admin_menu_component__WEBPACK_IMPORTED_MODULE_32__["AdminMenuComponent"],
                 _fragments_tag_filter_tag_filter_component__WEBPACK_IMPORTED_MODULE_35__["TagFilterComponent"],
                 _shared_translation_translate_pipe__WEBPACK_IMPORTED_MODULE_38__["TranslatePipe"],
-                _fragments_set_language_set_language_component__WEBPACK_IMPORTED_MODULE_39__["SetLanguageComponent"]
+                _fragments_set_language_set_language_component__WEBPACK_IMPORTED_MODULE_39__["SetLanguageComponent"],
+                _shared_filters_pojects_showd_pipe__WEBPACK_IMPORTED_MODULE_41__["PojectsShowdPipe"]
             ],
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(appRoutes),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
@@ -2031,7 +2035,7 @@ module.exports = ".content_short{\n\n  position: relative; left: 224px; top: 11p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = " <app-tag-filter [tags]=\"ProjectService.ProjectTags\" (tag)=\"ProjectService.onFilter($event)\" class=\"content_short\" id=\"projects\"></app-tag-filter>\n <div class=\"g_container\" >\n   <app-large-card *ngFor= \"let project of ProjectService.Projects \" [card]=\"project\"></app-large-card>\n </div>\n <!--<span  class=\"content link link_large\">More</span>-->\n"
+module.exports = " <app-tag-filter [tags]=\"ProjectService.ProjectTags\" (tag)=\"ProjectService.onFilter($event)\" class=\"content_short\" id=\"projects\"></app-tag-filter>\n <div class=\"g_container\" >\n   <app-large-card *ngFor= \"let project of ProjectService.Projects | pojectsShowd\"  [card]=\"project\"></app-large-card>\n </div>\n <!--<span  class=\"content link link_large\">More</span>-->\n"
 
 /***/ }),
 
@@ -2048,8 +2052,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_projects_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/projects.service */ "./src/app/shared/projects.service.ts");
 /* harmony import */ var _shared_translation_translate_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/translation/translate.service */ "./src/app/shared/translation/translate.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2062,27 +2064,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var ProjectsComponent = /** @class */ (function () {
-    function ProjectsComponent(ProjectService, translate, http) {
+    function ProjectsComponent(ProjectService, translate) {
         this.ProjectService = ProjectService;
         this.translate = translate;
-        this.http = http;
-        this.getProjects(this.translate.current_leng);
+        ProjectService.getProjects(this.translate.current_leng);
     }
     ProjectsComponent.prototype.ngOnInit = function () {
-    };
-    ProjectsComponent.prototype.getProjects = function (len, page, limit, id) {
-        var _this = this;
-        if (page === void 0) { page = 0; }
-        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]();
-        headers.append('Content-Type', 'application/json');
-        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].version + "/projects?ln=" + len + (limit ? ':lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
-            .subscribe(function (data) {
-            data.map(function (project) { return _this.ProjectService.Projects.push(project); });
-        }, function (e) { console.log('Error', e); }, function () {
-        });
     };
     ProjectsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2091,8 +2079,7 @@ var ProjectsComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./projects.component.css */ "./src/app/pages/projects/projects.component.css")]
         }),
         __metadata("design:paramtypes", [_shared_projects_service__WEBPACK_IMPORTED_MODULE_1__["ProjectsService"],
-            _shared_translation_translate_service__WEBPACK_IMPORTED_MODULE_2__["TranslateService"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+            _shared_translation_translate_service__WEBPACK_IMPORTED_MODULE_2__["TranslateService"]])
     ], ProjectsComponent);
     return ProjectsComponent;
 }());
@@ -2202,6 +2189,43 @@ var LimitTextPipe = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/shared/filters/pojects-showd.pipe.ts":
+/*!******************************************************!*\
+  !*** ./src/app/shared/filters/pojects-showd.pipe.ts ***!
+  \******************************************************/
+/*! exports provided: PojectsShowdPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PojectsShowdPipe", function() { return PojectsShowdPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var PojectsShowdPipe = /** @class */ (function () {
+    function PojectsShowdPipe() {
+    }
+    PojectsShowdPipe.prototype.transform = function (value, args) {
+        return value.filter(function (project) { return project.visible; });
+    };
+    PojectsShowdPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'pojectsShowd',
+            pure: false
+        })
+    ], PojectsShowdPipe);
+    return PojectsShowdPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/projects.service.ts":
 /*!********************************************!*\
   !*** ./src/app/shared/projects.service.ts ***!
@@ -2213,6 +2237,8 @@ var LimitTextPipe = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsService", function() { return ProjectsService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2223,6 +2249,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ProjectStatus;
 (function (ProjectStatus) {
     ProjectStatus[ProjectStatus["Default"] = 0] = "Default";
@@ -2231,16 +2259,44 @@ var ProjectStatus;
     ProjectStatus[ProjectStatus["Developing"] = 3] = "Developing";
 })(ProjectStatus || (ProjectStatus = {}));
 var ProjectsService = /** @class */ (function () {
-    function ProjectsService() {
+    function ProjectsService(http) {
+        this.http = http;
         this.Projects = [];
-        this.ProjectTags = ['All', 'Website', 'Mobile app', 'Desktop', 'Social'];
+        this.ProjectTags = ['All'];
     }
     ProjectsService.prototype.onFilter = function (tag_id) {
+        var _this = this;
         console.log(this.ProjectTags[tag_id]);
+        this.Projects.map(function (project) {
+            if (project.category === _this.ProjectTags[tag_id] || tag_id === 0) {
+                project.visible = true;
+            }
+            else {
+                project.visible = false;
+            }
+        });
+    };
+    ProjectsService.prototype.getProjects = function (len, page, limit, id) {
+        var _this = this;
+        if (page === void 0) { page = 0; }
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version + "/projects?ln=" + len + (limit ? ':lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
+            .subscribe(function (data) {
+            data.map(function (project) { _this.Projects.push(project); project.visible = true; });
+        }, function (e) { console.log('Error', e); }, function () {
+            _this.getProjectTags();
+        });
+    };
+    ProjectsService.prototype.getProjectTags = function () {
+        var _this = this;
+        this.ProjectTags = ['All'];
+        this.Projects.map(function (project) { _this.ProjectTags.push(project.category); });
+        this.ProjectTags = this.ProjectTags.filter(function (value, index, self) { return self.indexOf(value) === index; });
     };
     ProjectsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ProjectsService);
     return ProjectsService;
 }());

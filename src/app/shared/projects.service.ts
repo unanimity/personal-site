@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { v4 as uuid } from 'uuid';
+import {environment} from '../../environments/environment';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 export interface Project {
   id: string;
@@ -15,6 +16,7 @@ export interface Project {
   date: Date;
   color: string;
   language: string;
+  visible: boolean;
 
 }
 enum ProjectStatus {
@@ -28,17 +30,45 @@ export class ProjectsService {
 
 public  Projects: Project [] = [] ;
 
-public ProjectTags = ['All', 'Website', 'Mobile app', 'Desktop', 'Social'];
+public ProjectTags = ['All'];
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
   }
 
   onFilter(tag_id: number) {
     console.log(this.ProjectTags[tag_id]);
+    this.Projects.map(
+      (project) => {
+        if (project.category === this.ProjectTags[tag_id] || tag_id === 0) {
+          project.visible = true;
+        } else {
+          project.visible = false;
+        }
+      }
+    );
   }
 
+  public getProjects(len: string, page: number= 0, limit?: number,  id?: string ) {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(`http://${environment.url}:${environment.port}/api/v${environment.version}/projects?ln=${len}${limit ? ':lim=' + limit : ''}${id ? ':id=' + id : ''}${page ? ':page=' + page : ''}`,
+      {headers: headers})
+      .subscribe(
+        (data: Project[]) => {
+          data.map((project) => {this.Projects.push(project); project.visible = true; });
+        },
+        (e) => { console.log('Error',  e); },
+        () => {
+          this.getProjectTags();
+        }
+      );
 
-
+  }
+  getProjectTags() {
+    this.ProjectTags = ['All'];
+    this.Projects.map((project) => {this.ProjectTags.push(project.category); });
+    this.ProjectTags = this.ProjectTags.filter((value, index, self) => self.indexOf(value) === index);
+  }
 }
