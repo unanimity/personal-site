@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'sk-project.ru',
+  port: '3195',
+  version: 0
 };

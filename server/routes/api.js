@@ -20,7 +20,7 @@ router.get('/projects', function(req, res, next) {
       return res.status(300).end();
     }
 
-    let {ln,limit,id} = req.query;
+    let {ln,lim,id} = req.query;
 
       try {
               console.log();

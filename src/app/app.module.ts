@@ -38,6 +38,10 @@ import {TranslateService} from './shared/translation/translate.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslatePipe } from './shared/translation/translate.pipe';
 import { SetLanguageComponent } from './fragments/set-language/set-language.component';
+import {enableProdMode} from '@angular/core';
+import {environment} from '../environments/environment';
+
+
 const appRoutes: Routes = [
 /*  { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
@@ -72,6 +76,7 @@ export function setupTranslateFactory(
   service: TranslateService): Function {
   return () => service.use('en');
 }
+if (environment.production) { enableProdMode(); }
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,7 +105,7 @@ export function setupTranslateFactory(
     AdminMenuComponent,
     TagFilterComponent,
     TranslatePipe,
-    SetLanguageComponent,
+    SetLanguageComponent
 
   ],
   imports: [  RouterModule.forRoot(appRoutes),
