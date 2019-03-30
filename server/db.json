@@ -1,5 +1,200 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "category": "Website",
+      "id": "d459c54d-4238-4537-84ec-8af97036b095",
+      "color": "#fa474a",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "http://sporadic.ru/",
+      "description": "A site to my students club. It powered by WordPress and dinamic Theme Fasion.",
+      "img_url": "images/sporadic.jpg",
+      "status": 0,
+      "sub_title": "Web site",
+      "title": "SPORADIC",
+      "language": "en"
+    },
+    {
+      "category": "Desktop",
+      "id": "e2534117-6d27-470d-9b14-100fe02f860e",
+      "color": "#723dfa",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "http://www.optimumsoft.ru/",
+      "description": "Desktop version of Optimum Beauty's consolidated price programs, Velox LLC",
+      "img_url": "images/optimum.jpg",
+      "status": 0,
+      "sub_title": "Desctop programm",
+      "title": "Optimum Beauty",
+      "language": "en"
+    },
+    {
+      "category": "Mobile app",
+      "id": "d40893ac-d56b-4b5f-ae3f-630fef6fa7e4",
+      "color": "#fab100",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "http://runlimit.com",
+      "description": "An application for selecting the size of a motorcycle helmet using recognition.\nDevelopment of a mobile application on Kotlin and server side on Node.JS+MySQL",
+      "img_url": "images/runlimit.jpg",
+      "status": 0,
+      "sub_title": "Android App & Server",
+      "title": "RUNLIMIT",
+      "language": "en"
+    },
+    {
+      "category": "Website",
+      "id": "6d6d65cb-20ec-4bc4-869e-222599fdc54b",
+      "color": "#fa6a12",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Education portal",
+      "title": "SwiftBook",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "0b501288-6518-4fa5-840a-979560faf795",
+      "color": "#fae21d",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": "Two Russian satellites are planned to be activated inside the International Space Station (ISS) Russian Segment as part of a verification test from July 4-8.\n\nThe satellites will eventually be deployed by hand from the ISS during a Russian space walk tentatively scheduled for August 17, 2017.\n\nThe satellites Tanusha 1 and Tanusha 2 [спутники Тануша 1/2] FM transmissions on 437.050 MHz, will be downlinked at 145.800 MHz FM. Transmissions from Tanusha 1 should begin around 18:30 UT on July 4. Transmissions will cease on July 6 from 08:20 till 18:00 UT to allow the satellites to be swapped out. Tanusha 2 will then be activated beginning on July 6 around 18:00 UT and continue until July 8 at 10:30 UT.\nThe satellites will broadcast greeting messages in Russian, English, Spanish and Chinese. More details will be made available on the Southwest Western State University site at https://www.swsu.ru/",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Russian Satellites Tanusha 1 and 2",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "0f1f59f6-2a8b-4b66-a1fa-82b7f678e515",
+      "color": "#a3fa8f",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Дефолтный проект",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "4193a0bd-9071-4ff3-aacc-c0f1d12b5c64",
+      "color": "#7af3fa",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "«Ecuador UTE-ЮЗГУ» RS3S",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "0cae191c-b660-49f7-85fd-ef052a6147d9",
+      "color": "#fa6173",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Tomsk-TPU-120",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "28549515-471d-4034-b269-6140262da9a0",
+      "color": "#fa6173",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Dobrie dela",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "8678b5a3-51c7-415d-b321-d1d165fb2706",
+      "color": "#1f6e16",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "iMatreshka",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "b4b08f6d-1ed9-4e11-9c44-3f7ae5c83450",
+      "color": "#fa6173",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Hack-Kursk \"IT Vocation\"",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "4df29393-1e0f-4b69-af24-d50ae5c11abc",
+      "color": "#290d91",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": " PixelBook.ru",
+      "language": "en"
+    },
+    {
+      "category": "Free project",
+      "id": "83478703-b089-4532-a07a-ba365d3ffd41",
+      "color": "#fa6173",
+      "comments": 30,
+      "date": "2012-12-11T20:00:00.000Z",
+      "link": "www.vk.com",
+      "description": " ",
+      "img_url": "https://avatars.mds.yandex.net/get-pdb/1041965/67cc6142-111a-49ec-9b6c-83ae33ee1ca1/orig",
+      "status": 0,
+      "sub_title": "Firmware & Electronics",
+      "title": "Dobrie dela",
+      "language": "en"
+    }
+  ],
   "users": [],
-  "contens": []
+  "contens": [{
+    "id":"0",
+    "language": "en",
+    "text":"I was born on September 27, 1995 in the Donetsk city, Ukraine. My father has engineering education, works as a car mechanic. Mother engineer technologist.\n  When I was 7 years old I went to elementary school №148 in Donetsk city, after completing 9 classes I entered the Donetsk Technical Lyceum, during two years of study at the Lyceum, I paid more attention to the study of programming, physics and mathematics. I took an active part in the work of the Small Science Academy of Ukraine in the information technology section, worked on the creation of an optical text recognition system.\n  In 2013, I successfully passed the entrance exams and entered the Donetsk National Technical University on the profile “Electronic devices and systems”.\n  On August 12, 2014, in connection with the anti-terrorist operation in the Donetsk region, I was forced to move to Kursk, Russia.\n  On January 8, 2015, I was enrolled in the South-West State University for the “Computer Science and Computing Engineering”.\n  In parallel with training, from October 12, 2015 to October 11, 2017, I worked at the Small Satellites Development Center (Scientific Research Institute of Radioelectronic Systems).\n  I participated in the development and creation of small satellites \"Ecuador UTE-UZGU\" RS3S, \"Tomsk-TPU-120\" RS4S, \"Tanyusha-UZGU-1/2\" RS6S / RS7S.\n  Since 2015 I has been active in social activities in the Kursk Regional Youth Sports Public Organization “SPORADIK” (Radio Club RW3WWW).\n  In December 2016, I received official Russian citizenship.\n  In 2017 I defended a bachelor's degree on the topic “Control system of a module of a radio transmitting device for a small satelite”.\n  In 2017 I entered the South-West State University for the master's program of the same specialty.\n  In parallel with the training carried out work under contracts. Of the significant projects, I developed a web-site of distance learning programming  swiftbook.ru, carried out work under the theme “Conducting research and development work on the development and creation of Ecuador-UTE nanosatellite RS16S.\n  At the moment, I continue my studies at Southwestern State University."
+  },
+    {
+      "id":"0",
+      "language": "ru",
+      "text":"heheheh руруруру руруу руруtsk region, I was forced to move to Kursk, Russia.\n  On January 8, 2015, I was enrolled in the South-West State University for the “Computer Science and Computing Engineering”.\n  In parallel with training, from October 12, 2015 to October 11, 2017, I worked at the Small Satellites Development Center (Scientific Research Institute of Radioelectronic Systems).\n  I participated in the development and creation of small satellites \"Ecuador UTE-UZGU\" RS3S, \"Tomsk-TPU-120\" RS4S, \"Tanyusha-UZGU-1/2\" RS6S / RS7S.\n  Since 2015 I has been active in social activities in the Kursk Regional Youth Sports Public Organization “SPORADIK” (Radio Club RW3WWW).\n  In December 2016, I received official Russian citizenship.\n  In 2017 I defended a bachelor's degree on the topic “Control system of a module of a radio transmitting device for a small satelite”.\n  In 2017 I entered the South-West State University for the master's program of the same specialty.\n  In parallel with the training carried out work under contracts. Of the significant projects, I developed a web-site of distance learning programming  swiftbook.ru, carried out work under the theme “Conducting research and development work on the development and creation of Ecuador-UTE nanosatellite RS16S.\n  At the moment, I continue my studies at Southwestern State University."
+    }
+
+  ]
+
 }
