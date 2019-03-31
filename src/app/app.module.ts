@@ -44,7 +44,7 @@ import { PojectsShowdPipe } from './shared/filters/pojects-showd.pipe';
 
 
 const appRoutes: Routes = [
-/*  { path: 'crisis-center', component: CrisisListComponent },
+/*{ path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },*/
   {
     path: '',

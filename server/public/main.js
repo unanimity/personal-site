@@ -186,7 +186,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var appRoutes = [
-    /*  { path: 'crisis-center', component: CrisisListComponent },
+    /*{ path: 'crisis-center', component: CrisisListComponent },
       { path: 'hero/:id',      component: HeroDetailComponent },*/
     {
         path: '',
@@ -890,7 +890,7 @@ module.exports = ".leng{\npadding-left: 16px;\ncursor: pointer;\n}\n.selected_le
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"display: inline-flex;\n    position: absolute;\n    bottom: 5px; height: 36px\">\n  <p (click)=\"setLang('en')\" class=\"content__description leng\" [ngClass]=\"{selected_leng:translate.current_leng=='en'}\">ENG</p>\n  <p (click)=\"setLang('ru')\" class=\"content__description leng\" [ngClass]=\"{selected_leng:translate.current_leng=='ru'}\">RUS</p>\n</div>\n\n"
+module.exports = "<div style=\"display: inline-flex;\n    position: absolute;\n    bottom: 5px; height: 36px\">\n  <!--<p (click)=\"setLang('en')\" class=\"content__description leng\" [ngClass]=\"{selected_leng:translate.current_leng=='en'}\">ENG</p>-->\n  <!--<p (click)=\"setLang('ru')\" class=\"content__description leng\" [ngClass]=\"{selected_leng:translate.current_leng=='ru'}\">RUS</p>-->\n</div>\n\n"
 
 /***/ }),
 
