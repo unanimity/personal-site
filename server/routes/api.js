@@ -29,9 +29,9 @@ router.get('/projects', function(req, res, next) {
                 db.get('projects')
                 .filter({language: ln?ln:'en'})
                /**/
-              /*  .sortBy('comments')*/
-             /*   .take(14)*/
-                .value())
+              .sortBy('comments')
+              .take(lim?lim:100)
+              .value())
               );
 
       } catch (e) {

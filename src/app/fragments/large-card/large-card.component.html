@@ -4,10 +4,11 @@
     <div class="post-module"  >
       <!-- Thumbnail-->
       <div class="thumbnail">
-        <div class="date" [ngStyle]="{'background-color':card.color}">
+        <!--<div class="date" [ngStyle]="{'background-color':card.color}">
           <div class="day">{{card.date | date:'D'}}</div>
           <div class="month">{{card.date | date:'MM'}}</div>
-        </div><img src="{{card.img_url}}"/>
+        </div>-->
+      <img src="{{card.img_url}}"/>
       </div>
       <!-- Post Content-->
       <a href="{{card.link}}" target="_blank">
