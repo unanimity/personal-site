@@ -59,7 +59,7 @@
     {
       "category": "Engineer",
       "id": "0b501288-6518-4fa5-840a-979560faf795",
-      "color": "#fae21d",
+      "color": "rgb(66, 98, 204)",
       "comments": 30,
       "date": "2012-12-11T20:00:00.000Z",
       "link": "https://amsat-uk.org/2017/06/30/russian-tanusha-1-and-2-satellites/",
@@ -73,7 +73,7 @@
     {
       "category": "Engineer",
       "id": "4193a0bd-9071-4ff3-aacc-c0f1d12b5c64",
-      "color": "#7af3fa",
+      "color": "rgba(35, 130, 67, 7)",
       "comments": 1,
       "date": "2012-12-11T20:00:00.000Z",
       "link": "https://www.youtube.com/watch?v=FUMADz-zyj8",
@@ -87,7 +87,7 @@
     {
       "category": "Engineer",
       "id": "0cae191c-b660-49f7-85fd-ef052a6147d9",
-      "color": "#fa6173",
+      "color": "rgb(92, 164, 51)",
       "comments": 8,
       "date": "2012-12-11T20:00:00.000Z",
       "link": "#",
@@ -101,7 +101,7 @@
     {
       "category": "Mobile",
       "id": "8678b5a3-51c7-415d-b321-d1d165fb2706",
-      "color": "#1f6e16",
+      "color": "rgb(191, 0, 103)",
       "comments": 30,
       "date": "2012-12-11T20:00:00.000Z",
       "link": "#",

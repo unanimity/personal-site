@@ -2281,6 +2281,7 @@ var ProjectsService = /** @class */ (function () {
         if (page === void 0) { page = 0; }
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
         headers.append('Content-Type', 'application/json');
+        this.Projects = [];
         return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version + "/projects?ln=" + len + (limit ? ':lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
             .subscribe(function (data) {
             data.map(function (project) { _this.Projects.push(project); project.visible = true; });

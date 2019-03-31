@@ -53,6 +53,7 @@ public ProjectTags = ['All'];
   public getProjects(len: string, page: number= 0, limit?: number,  id?: string ) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
+    this.Projects = [];
     return this.http.get(`http://${environment.url}:${environment.port}/api/v${environment.version}/projects?ln=${len}${limit ? ':lim=' + limit : ''}${id ? ':id=' + id : ''}${page ? ':page=' + page : ''}`,
       {headers: headers})
       .subscribe(
