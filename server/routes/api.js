@@ -23,7 +23,7 @@ router.get('/projects', cors(), function(req, res, next) {
     let {ln,lim,id} = req.query;
 
       try {
-              console.log();
+              console.log(db);
               return res.status(200).end(
                 JSON.stringify(
                 db.get('projects')
