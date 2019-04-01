@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-
+var cors = require('cors');
 const adapter = new FileSync('db.json');
 const db = low(adapter);
 
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/projects', function(req, res, next) {
+router.get('/projects', cors(), function(req, res, next) {
 
     if (!req.body) {
       return res.status(300).end();
@@ -41,7 +41,7 @@ router.get('/projects', function(req, res, next) {
 
 });
 
-router.get('/photos', function(req, res, next) {
+router.get('/photos', cors(), function(req, res, next) {
 
   if (!req.body) {
     return res.status(300).end();

@@ -27,7 +27,7 @@ public  Photos: Photo[];
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     if (reinit) {this.Photos = []; }
-    return this.http.get(`http://${environment.url}:${environment.port}/api/v${environment.version}/photos${limit ? '?lim=' + limit : ''}${id ? ':id=' + id : ''}${page ? ':page=' + page : ''}`,
+    return this.http.get(`http://${environment.url}${environment.port ? ':' + environment.port : ''}/api/v${environment.version}/photos${limit ? '?lim=' + limit : ''}${id ? ':id=' + id : ''}${page ? ':page=' + page : ''}`,
       {headers: headers})
       .subscribe(
         (data: Photo[]) => {
