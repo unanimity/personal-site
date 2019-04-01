@@ -41,6 +41,7 @@ import { SetLanguageComponent } from './fragments/set-language/set-language.comp
 import {enableProdMode} from '@angular/core';
 import {environment} from '../environments/environment';
 import { PojectsShowdPipe } from './shared/filters/pojects-showd.pipe';
+import {CrystalGalleryModule} from 'ngx-crystal-gallery';
 
 
 const appRoutes: Routes = [
@@ -113,7 +114,7 @@ if (environment.production) { enableProdMode(); }
   imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,
     ScrollToModule.forRoot(), MasonryGalleryModule, ImageViewerModule.forRoot(),
-    HttpClientModule
+    HttpClientModule, CrystalGalleryModule
   ],
   providers: [
     ProjectsService,

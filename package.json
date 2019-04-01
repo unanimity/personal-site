@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --env=prod",
+    "build": "ng build --prod --environment=prod",
     "build_test": "ng build ",
     "test": "ng test",
     "lint": "ng lint",
@@ -28,6 +28,7 @@
     "hammerjs": "^2.0.8",
     "lowdb": "^1.0.0",
     "ng2-scroll-to-el": "^1.2.1",
+    "ngx-crystal-gallery": "^1.1.5",
     "ngx-image-viewer": "^1.0.13",
     "ngx-masonry-gallery": "^2.0.0",
     "rxjs": "^6.3.3",

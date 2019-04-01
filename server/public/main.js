@@ -136,12 +136,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fragments_set_language_set_language_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./fragments/set-language/set-language.component */ "./src/app/fragments/set-language/set-language.component.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _shared_filters_pojects_showd_pipe__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./shared/filters/pojects-showd.pipe */ "./src/app/shared/filters/pojects-showd.pipe.ts");
+/* harmony import */ var ngx_crystal_gallery__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ngx-crystal-gallery */ "./node_modules/ngx-crystal-gallery/fesm5/ngx-crystal-gallery.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -259,7 +261,7 @@ var AppModule = /** @class */ (function () {
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(appRoutes),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
                 ng2_scroll_to_el__WEBPACK_IMPORTED_MODULE_7__["ScrollToModule"].forRoot(), ngx_masonry_gallery__WEBPACK_IMPORTED_MODULE_23__["MasonryGalleryModule"], ngx_image_viewer__WEBPACK_IMPORTED_MODULE_34__["ImageViewerModule"].forRoot(),
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_37__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_37__["HttpClientModule"], ngx_crystal_gallery__WEBPACK_IMPORTED_MODULE_42__["CrystalGalleryModule"]
             ],
             providers: [
                 _shared_projects_service__WEBPACK_IMPORTED_MODULE_18__["ProjectsService"],
@@ -1940,7 +1942,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"screen screen_contacts j-section\"   id=\"photos\">\n  <div class=\"content\" style=\"max-width: 100%\">\n    <h2 class=\"content__subtitle content__subtitle_icon\">My Instagram\n      <i class=\"content__subtitle__icon icon icon-4\"></i>\n    </h2>\n    <ngx-image-viewer [src]=\"urls\"\n                           [config]=\"{customBtns:[{name: 'link', icon: 'fa fa-paperclip'}]}\"\n  >\n  </ngx-image-viewer>\n    <div class=\"columns clearfix\">\n      <article  >\n        <ngx-masonry-gallery [width]=\"512\" [gutter]=\"21\" [images]=\"images\"></ngx-masonry-gallery>\n      </article>\n    </div>\n\n\n  </div>\n</section>\n"
+module.exports = "<section class=\"screen screen_contacts j-section\" (scroll)=\"onScroled($event)\"  id=\"photos\">\n  <div class=\"content\" style=\"max-width: 100%\">\n    <h2 class=\"content__subtitle content__subtitle_icon\">My Instagram\n      <i class=\"content__subtitle__icon icon icon-4\"></i>\n    </h2>\n\n\n    <div class=\"columns clearfix\">\n      <article  >\n       <!-- <ngx-masonry-gallery [width]=\"512\" [gutter]=\"21\" [images]=\"images\"></ngx-masonry-gallery>!-->\n        <crystal-gallery [images]=\"PhotosService.Photos\" [config]=\"myConfig\"></crystal-gallery>\n      </article>\n    </div>\n\n\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -1955,6 +1957,7 @@ module.exports = "<section class=\"screen screen_contacts j-section\"   id=\"pho
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosComponent", function() { return PhotosComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_photos_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/photos.service */ "./src/app/shared/photos.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1965,50 +1968,37 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var PhotosComponent = /** @class */ (function () {
-    function PhotosComponent() {
-        this.urls = [
-            'http://www.sk-project.ru/images/photos/1.JPG',
-            'http://www.sk-project.ru/images/photos/2.JPG',
-            'http://www.sk-project.ru/images/photos/3.JPG',
-            'http://www.sk-project.ru/images/photos/4.JPG',
-            'http://www.sk-project.ru/images/photos/5.JPG',
-            'http://www.sk-project.ru/images/photos/6.JPG',
-            'http://www.sk-project.ru/images/photos/7.JPG',
-            'http://www.sk-project.ru/images/photos/8.JPG',
-            'http://www.sk-project.ru/images/photos/9.JPG',
-            'http://www.sk-project.ru/images/photos/10.JPG',
-            'http://www.sk-project.ru/images/photos/11.JPG',
-            'http://www.sk-project.ru/images/photos/12.JPG',
-            'http://www.sk-project.ru/images/photos/13.JPG',
-            'http://www.sk-project.ru/images/photos/14.JPG',
-            'http://www.sk-project.ru/images/photos/15.JPG',
-            'http://www.sk-project.ru/images/photos/16.JPG',
-            'http://www.sk-project.ru/images/photos/17.JPG',
-            'http://www.sk-project.ru/images/photos/18.JPG',
-            'http://www.sk-project.ru/images/photos/19.JPG',
-            'http://www.sk-project.ru/images/photos/20.JPG',
-            'http://www.sk-project.ru/images/photos/21.JPG'
-        ];
+    function PhotosComponent(PhotosService) {
+        this.PhotosService = PhotosService;
+        this.myConfig = {
+            masonry: true,
+            masonryMaxHeight: 420,
+            masonryGutter: 4,
+            counter: false
+        };
+        this.page = 0;
+        this.limit = 16;
+        PhotosService.getPhotos(true);
     }
     PhotosComponent.prototype.ngOnInit = function () {
+        window.addEventListener('scroll', this.onScroled, true);
     };
-    Object.defineProperty(PhotosComponent.prototype, "images", {
-        get: function () {
-            return this.urls.map(function (m) { return ({
-                imageUrl: m
-            }); });
-        },
-        enumerable: true,
-        configurable: true
-    });
+    PhotosComponent.prototype.ngOnDestroy = function () {
+        window.removeEventListener('scroll', this.onScroled, true);
+    };
+    PhotosComponent.prototype.onScroled = function (event) {
+        //  console.log(window.pageYOffset , window.innerHeight);
+        /*  this.PhotosService.getPhotos(false, this.limit, this.page);*/
+    };
     PhotosComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-photos',
             template: __webpack_require__(/*! ./photos.component.html */ "./src/app/pages/photos/photos.component.html"),
             styles: [__webpack_require__(/*! ./photos.component.css */ "./src/app/pages/photos/photos.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_shared_photos_service__WEBPACK_IMPORTED_MODULE_1__["PhotosService"]])
     ], PhotosComponent);
     return PhotosComponent;
 }());
@@ -2220,6 +2210,64 @@ var PojectsShowdPipe = /** @class */ (function () {
         })
     ], PojectsShowdPipe);
     return PojectsShowdPipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/photos.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/shared/photos.service.ts ***!
+  \******************************************/
+/*! exports provided: PhotosService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosService", function() { return PhotosService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PhotosService = /** @class */ (function () {
+    function PhotosService(http) {
+        this.http = http;
+    }
+    PhotosService.prototype.getPhotos = function (reinit, page, limit, id) {
+        var _this = this;
+        if (reinit === void 0) { reinit = false; }
+        if (page === void 0) { page = 0; }
+        if (limit === void 0) { limit = 16; }
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
+        headers.append('Content-Type', 'application/json');
+        if (reinit) {
+            this.Photos = [];
+        }
+        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].version + "/photos" + (limit ? '?lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
+            .subscribe(function (data) {
+            data.map(function (photo) { _this.Photos.push(photo); });
+        }, function (e) { console.log('Error', e); }, function () {
+        });
+    };
+    PhotosService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], PhotosService);
+    return PhotosService;
 }());
 
 

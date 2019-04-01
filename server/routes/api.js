@@ -39,11 +39,34 @@ router.get('/projects', function(req, res, next) {
         return res.status(300).end();
       }
 
-
-
-
 });
 
+router.get('/photos', function(req, res, next) {
 
+  if (!req.body) {
+    return res.status(300).end();
+  }
+
+  let {lim,page,id} = req.query;
+
+  try {
+    console.log();
+    return res.status(200).end(
+      JSON.stringify(
+        db.get('photos')
+         /* .filter(id?{id:id}:true)*/
+         /**/
+          .sortBy('date')
+         /* .skip((lim&&page)?lim*page:0)*/
+          .take(lim?lim:100)
+          .value())
+    );
+
+  } catch (e) {
+
+    return res.status(300).end();
+  }
+
+});
 
 module.exports = router;
