@@ -40,7 +40,7 @@ import { TranslatePipe } from './shared/translation/translate.pipe';
 import { SetLanguageComponent } from './fragments/set-language/set-language.component';
 import {enableProdMode} from '@angular/core';
 import {environment} from '../environments/environment';
-import { PojectsShowdPipe } from './shared/filters/pojects-showd.pipe';
+import { ShowProjectPipe } from './shared/filters/pojects-showd.pipe';
 import {CrystalGalleryModule} from 'ngx-crystal-gallery';
 
 
@@ -108,8 +108,7 @@ if (environment.production) { enableProdMode(); }
     TagFilterComponent,
     TranslatePipe,
     SetLanguageComponent,
-    PojectsShowdPipe
-
+    ShowProjectPipe
   ],
   imports: [  RouterModule.forRoot(appRoutes),
     BrowserModule, BrowserAnimationsModule, MatSidenavModule, MatButtonModule, MatCheckboxModule,

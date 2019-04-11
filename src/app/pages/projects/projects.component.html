@@ -1,5 +1,5 @@
  <app-tag-filter [tags]="ProjectService.ProjectTags" (tag)="ProjectService.onFilter($event)" class="content_short" id="projects"></app-tag-filter>
  <div class="g_container" >
-   <app-large-card *ngFor= "let project of ProjectService.Projects | pojectsShowd"  [card]="project"></app-large-card>
+   <app-large-card *ngFor= "let project of ProjectService.Projects | show_project"  [card]="project"></app-large-card>
  </div>
  <!--<span  class="content link link_large">More</span>-->
