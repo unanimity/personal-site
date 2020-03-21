@@ -256,7 +256,7 @@ var AppModule = /** @class */ (function () {
                 _fragments_tag_filter_tag_filter_component__WEBPACK_IMPORTED_MODULE_35__["TagFilterComponent"],
                 _shared_translation_translate_pipe__WEBPACK_IMPORTED_MODULE_38__["TranslatePipe"],
                 _fragments_set_language_set_language_component__WEBPACK_IMPORTED_MODULE_39__["SetLanguageComponent"],
-                _shared_filters_pojects_showd_pipe__WEBPACK_IMPORTED_MODULE_41__["PojectsShowdPipe"]
+                _shared_filters_pojects_showd_pipe__WEBPACK_IMPORTED_MODULE_41__["ShowProjectPipe"]
             ],
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(appRoutes),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSidenavModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
@@ -1148,7 +1148,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var TitleMessageComponent = /** @class */ (function () {
     function TitleMessageComponent() {
-        this.content_list = ['student', 'programmer', 'tourist', 'friend', 'tourist', 'dreamer', 'Master'];
+        this.content_list = ['engineer', 'programmer', 'tourist', 'friend', 'tourist', 'dreamer', 'master'];
         this.time_interval = 350;
         this.pause = 3;
     }
@@ -1502,7 +1502,7 @@ module.exports = ".screen_contacts{\n  background-image:none\n}\n.contacts__icon
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"screen screen_contacts j-section\"   id=\"contacts\">\n  <div class=\"content\">\n    <div class=\"columns clearfix\">\n      <article class=\"columns__item columns__item_form\">\n        <div class=\"form form_flip form-ajax form-reset j-form-flip\"  data-forge-name=\"feedback-form\" >\n          <div class=\"form__border form__front j-form-side\">\n            <h2 class=\"content__subtitle\">{{\"Let's start\"|translate}}</h2>\n            <p class=\"content__description\">{{\"Message me. Usually I reply on the same day.\"|translate}}</p>\n               <div class=\"contacts__line\">\n\n                <a class=\"contacts_icons\" href=\"https://www.linkedin.com/in/sergei-kharlamov-0a7a60162/\" target=\"_blank\"><img src=\"./images/linkedin.png\"></a>\n                <a class=\"contacts_icons\" href=\"https://vk.com/id279349824\" target=\"_blank\"><img src=\"./images/vk.png\"></a>\n                <a class=\"contacts_icons\" href=\"https://www.facebook.com/profile.php?id=100013280710459\" target=\"_blank\"><img src=\"./images/facebook.png\"></a>\n\n\n               </div>\n          </div>\n        </div>\n      </article>\n      <article class=\"columns__item columns__item_contacts\">\n        <div class=\"contacts\">\n          <button (click)=\"onQR()\" class=\"header-menu__link header-menu__link_filled j-navigation current\">QR</button>\n          <div *ngIf=\"!QR\" class=\"contacts__icon\">\n            <img src=\"./images/qr-code.svg\">\n          </div>\n          <div *ngIf=\"QR\" class=\"contacts__icon\">\n           <img src=\"./images/bizcardmaker-com-theme-picture--stardust-full.jpg\">\n          </div>\n\n\n          <div class=\"contacts__group\">\n            <div class=\"contacts__group__middle\">\n\n\n\n            </div>\n          </div>\n        </div>\n      </article>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section class=\"screen screen_contacts j-section\"   id=\"contacts\">\n  <div class=\"content\">\n    <div class=\"columns clearfix\">\n      <article class=\"columns__item columns__item_form\">\n        <div class=\"form form_flip form-ajax form-reset j-form-flip\"  data-forge-name=\"feedback-form\" >\n          <div class=\"form__border form__front j-form-side\">\n            <h2 class=\"content__subtitle\">{{\"Let's start\"|translate}}</h2>\n            <p class=\"content__description\">{{\"Message me. Usually I reply on the same day.\"|translate}}</p>\n               <div class=\"contacts__line\">\n\n                <a class=\"contacts_icons\" href=\"https://www.linkedin.com/in/unanimity\" target=\"_blank\"><img src=\"./images/linkedin.png\"></a>\n                <a class=\"contacts_icons\" href=\"https://vk.com/id279349824\" target=\"_blank\"><img src=\"./images/vk.png\"></a>\n                <a class=\"contacts_icons\" href=\"https://www.facebook.com/profile.php?id=100013280710459\" target=\"_blank\"><img src=\"./images/facebook.png\"></a>\n\n\n               </div>\n          </div>\n        </div>\n      </article>\n      <article class=\"columns__item columns__item_contacts\">\n        <div class=\"contacts\">\n          <button (click)=\"onQR()\" class=\"header-menu__link header-menu__link_filled j-navigation current\">QR</button>\n          <div *ngIf=\"!QR\" class=\"contacts__icon\">\n            <img src=\"./images/qr-code.svg\">\n          </div>\n          <div *ngIf=\"QR\" class=\"contacts__icon\">\n           <img src=\"./images/bizcardmaker-com-theme-picture--stardust-full.jpg\">\n          </div>\n\n\n          <div class=\"contacts__group\">\n            <div class=\"contacts__group__middle\">\n\n\n\n            </div>\n          </div>\n        </div>\n      </article>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -2025,7 +2025,7 @@ module.exports = ".content_short{\n\n  position: relative; left: 224px; top: 11p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = " <app-tag-filter [tags]=\"ProjectService.ProjectTags\" (tag)=\"ProjectService.onFilter($event)\" class=\"content_short\" id=\"projects\"></app-tag-filter>\n <div class=\"g_container\" >\n   <app-large-card *ngFor= \"let project of ProjectService.Projects | pojectsShowd\"  [card]=\"project\"></app-large-card>\n </div>\n <!--<span  class=\"content link link_large\">More</span>-->\n"
+module.exports = " <app-tag-filter [tags]=\"ProjectService.ProjectTags\" (tag)=\"ProjectService.onFilter($event)\" class=\"content_short\" id=\"projects\"></app-tag-filter>\n <div class=\"g_container\" >\n   <app-large-card *ngFor= \"let project of ProjectService.Projects | show_project\"  [card]=\"project\"></app-large-card>\n </div>\n <!--<span  class=\"content link link_large\">More</span>-->\n"
 
 /***/ }),
 
@@ -2183,12 +2183,12 @@ var LimitTextPipe = /** @class */ (function () {
 /*!******************************************************!*\
   !*** ./src/app/shared/filters/pojects-showd.pipe.ts ***!
   \******************************************************/
-/*! exports provided: PojectsShowdPipe */
+/*! exports provided: ShowProjectPipe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PojectsShowdPipe", function() { return PojectsShowdPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowProjectPipe", function() { return ShowProjectPipe; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2197,19 +2197,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var PojectsShowdPipe = /** @class */ (function () {
-    function PojectsShowdPipe() {
+var ShowProjectPipe = /** @class */ (function () {
+    function ShowProjectPipe() {
     }
-    PojectsShowdPipe.prototype.transform = function (value, args) {
+    ShowProjectPipe.prototype.transform = function (value, args) {
         return value.filter(function (project) { return project.visible; });
     };
-    PojectsShowdPipe = __decorate([
+    ShowProjectPipe = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
-            name: 'pojectsShowd',
+            name: 'show_project',
             pure: false
         })
-    ], PojectsShowdPipe);
-    return PojectsShowdPipe;
+    ], ShowProjectPipe);
+    return ShowProjectPipe;
 }());
 
 
@@ -2255,7 +2255,7 @@ var PhotosService = /** @class */ (function () {
         if (reinit) {
             this.Photos = [];
         }
-        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].version + "/photos" + (limit ? '?lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
+        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url + (_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].port ? ':' + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].port : '') + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].version + "/photos" + (limit ? '?lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
             .subscribe(function (data) {
             data.map(function (photo) { _this.Photos.push(photo); });
         }, function (e) { console.log('Error', e); }, function () {
@@ -2330,7 +2330,7 @@ var ProjectsService = /** @class */ (function () {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
         headers.append('Content-Type', 'application/json');
         this.Projects = [];
-        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].url + ":" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].port + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version + "/projects?ln=" + len + (limit ? ':lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
+        return this.http.get("http://" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].url + (_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].port ? ':' + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].port : '') + "/api/v" + _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version + "/projects?ln=" + len + (limit ? ':lim=' + limit : '') + (id ? ':id=' + id : '') + (page ? ':page=' + page : ''), { headers: headers })
             .subscribe(function (data) {
             data.map(function (project) { _this.Projects.push(project); project.visible = true; });
         }, function (e) { console.log('Error', e); }, function () {
@@ -2510,7 +2510,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/sapp/Local Projects/personal-site/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/unanimity/projects/personal-site/src/main.ts */"./src/main.ts");
 
 
 /***/ })
