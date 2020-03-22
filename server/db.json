@@ -153,6 +153,20 @@
       "sub_title": "Website on PHP",
       "title": "Dobrie dela",
       "language": "en"
+    },
+    {
+      "category": "Mobile",
+      "id": "83478703-b089-4532-a07a-ba365d3ffd54",
+      "color": "#fa6173",
+      "comments": 8,
+      "date": "2019-05-01T20:00:00.000Z",
+      "link": "https://fuelup.ru/",
+      "description": "Infrastructure development and administration",
+      "img_url": "images/projects/fuelup.png",
+      "status": 0,
+      "sub_title": "As DevOps engineer ",
+      "title": "FuelUP",
+      "language": "en"
     }
   ],
   "users": [],
