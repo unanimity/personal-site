@@ -6,15 +6,17 @@
 
 <header class="layout-header" id="header"  >
   <div class="layout-header__wrapper">
+
     <app-logo></app-logo>
-    <!--<nav class="layout-header__menu header-menu">-->
-      <!--<a class="header-menu__link header-menu__link_filled j-navigation current" routerLink="/login">let's get acquainted!</a>-->
-    <!--</nav>-->
+
   </div>
 </header>
+<div>
 
+
+<canvas id="canvas" #canvas style="position: absolute; width: 100%; min-height: 100%; z-index:0"></canvas>
 <router-outlet></router-outlet>
-
+</div>
 <script src="js/vendor.min.js"></script>
 <script src="js/app.min.js"></script>
 <!--[if lt IE 9]>

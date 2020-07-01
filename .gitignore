@@ -8,8 +8,11 @@
 
 # dependencies
 /node_modules
+server/node_modules
+server/public
 
 # IDEs and editors
+server/.idea
 /.idea
 .project
 .classpath
@@ -42,3 +45,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+

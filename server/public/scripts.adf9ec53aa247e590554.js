@@ -1,1 +1,0 @@
-!function(e,t,a,n,c,m,i){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date,m=t.createElement(a),i=t.getElementsByTagName(a)[0],m.async=1,m.src="https://mc.yandex.ru/metrika/tag.js",i.parentNode.insertBefore(m,i)}(window,document,"script"),ym(52259266,"init",{id:52259266,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0});

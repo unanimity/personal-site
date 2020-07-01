@@ -45,8 +45,7 @@ import {CrystalGalleryModule} from 'ngx-crystal-gallery';
 
 
 const appRoutes: Routes = [
-/*{ path: 'crisis-center', component: CrisisListComponent },
-  { path: 'hero/:id',      component: HeroDetailComponent },*/
+
   {
     path: '',
     component: HomeComponent,
@@ -67,11 +66,7 @@ const appRoutes: Routes = [
     component: AdminPanelComponent,
     canActivate: [AdminGuardService],
     data: { title: 'Sergei Kharlamov' }
-  }/*,
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }*/,
+  },
   { path: '**', redirectTo: ''}
 ];
 export function setupTranslateFactory(
